@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /live/
+Disallow: /tools/
+
+Sitemap: https://hasanradi93.github.io/razov-bots/sitemap.xml

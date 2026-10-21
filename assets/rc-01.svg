@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#f7efe4"/><stop offset="1" stop-color="#d9c2a5"/></radialGradient>
+    <linearGradient id="bag" x1="0" x2="1"><stop offset="0" stop-color="#e8dccb"/><stop offset=".5" stop-color="#fffaf2"/><stop offset="1" stop-color="#d8c8b2"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="270" rx="100" ry="10" fill="#6d4c33" opacity=".22"/>
+  <path d="M128 60c20-10 124-10 144 0l-4 18c14 40 16 120 8 182-34 10-118 10-152 0-8-62-6-142 8-182z" fill="url(#bag)"/>
+  <path d="M128 60c20-10 124-10 144 0l-4 18c-30 8-106 8-136 0z" fill="#c9b79c"/>
+  <path d="M136 116h128v70H136z" fill="#8d6e63"/>
+  <text x="200" y="142" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#fff8ee" letter-spacing="1.5">DOE SELECT</text>
+  <text x="200" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#fff8ee">Basmati rice</text>
+  <text x="200" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#fff8ee">5 kg</text>
+  <g fill="#fffdf8" stroke="#d6c4a8" stroke-width=".8">
+    <ellipse cx="160" cy="212" rx="7" ry="2.4" transform="rotate(-20 160 212)"/><ellipse cx="180" cy="220" rx="7" ry="2.4" transform="rotate(15 180 220)"/>
+    <ellipse cx="204" cy="214" rx="7" ry="2.4" transform="rotate(-35 204 214)"/><ellipse cx="226" cy="222" rx="7" ry="2.4" transform="rotate(25 226 222)"/>
+    <ellipse cx="246" cy="212" rx="7" ry="2.4" transform="rotate(-10 246 212)"/>
+  </g>
+</svg>

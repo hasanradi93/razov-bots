@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Razov Bots — assistants that answer, book and sell on Telegram</title>
+  <meta name="description" content="Four AI assistants by Razov.tech that answer your customers on Telegram in Arabic, English and French, book appointments, take orders and tell you about each one. Try every bot live.">
+  <meta name="theme-color" content="#071A1D">
+  <meta property="og:title" content="Razov Bots — try four AI assistants live">
+  <meta property="og:description" content="A dental practice, a beauty salon, a medical practice and a wholesaler — each with a bot that answers in Arabic, English and French. Open one and talk to it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hasanradi93.github.io/razov-bots/">
+  <meta property="og:image" content="https://hasanradi93.github.io/razov-bots/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Meet the bots: an eight-pointed star and a clock, with four planets around it">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://hasanradi93.github.io/razov-bots/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://razov.tech/#org",
+        "name": "Razov.tech",
+        "url": "https://razov.tech",
+        "email": "hassan93radi@gmail.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "hassan93radi@gmail.com",
+          "telephone": "+96171634760",
+          "availableLanguage": [
+            "Arabic",
+            "English",
+            "French"
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Telegram bots for businesses: bookings, questions and orders",
+        "serviceType": "AI assistant on Telegram",
+        "provider": {
+          "@id": "https://razov.tech/#org"
+        },
+        "areaServed": "LB",
+        "availableLanguage": [
+          "Arabic",
+          "English",
+          "French"
+        ],
+        "url": "https://hasanradi93.github.io/razov-bots/",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Answers questions",
+            "price": "45",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Books appointments",
+            "price": "120",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Books in five languages",
+            "price": "250",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preload" href="assets/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/readex-pro-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+  <a class="skip" href="#worlds">Skip to the bots</a>
+
+  <header class="bar" data-bar>
+    <!-- The branch, as it reads: razov.tech, the company's site, and its bots. -->
+    <div class="brand">
+      <a class="brand-home" href="#top" aria-label="Razov Bots, back to the top"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><use href="#star"/></svg></a>
+      <a class="brand-root" href="https://razov.tech" data-root-href>razov.tech</a>
+      <svg class="brand-branch" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2v6a4 4 0 0 0 4 4h6M10 9l3 3-3 3"/></svg>
+      <a class="brand-leaf" href="#top">bots</a>
+    </div>
+    <nav class="bar-nav" aria-label="Sections">
+      <a href="#worlds">The bots</a>
+      <a href="#how">How it works</a>
+      <a href="#plans">Prices</a>
+    </nav>
+    <a class="button button-small" href="#get">Get one</a>
+  </header>
+
+  <main id="top">
+    <!-- The portal: one canvas, drawn by js/hero.js. Everything it shows is also reachable below. -->
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <canvas class="hero-gl" data-hero-gl aria-hidden="true"></canvas>
+      <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <h1 id="hero-title" class="hero-title" data-decode>Meet the bots</h1>
+        <p class="hero-lead">Four assistants that answer your customers on Telegram in Arabic, English and French. They book appointments, take orders and tell you about each one. Open any of them below and talk to it.</p>
+        <div class="hero-actions">
+          <a class="button" href="#worlds">Try a bot</a>
+          <a class="button button-ghost" href="#get">Get one for your business</a>
+        </div>
+      </div>
+      <p class="hero-hint" aria-hidden="true">Tap a planet to enter its world</p>
+    </section>
+
+    <!-- The worlds: tabs and panels are built from js/bots.js by js/worlds.js. -->
+    <section class="worlds" id="worlds" aria-labelledby="worlds-title" data-worlds>
+      <div class="worlds-head">
+        <h2 id="worlds-title" class="section-title" data-open-type>Pick a world</h2>
+        <p class="section-lead">Each bot runs a different kind of business. Choose one, read what it does, then talk to it right here or live on Telegram.</p>
+      </div>
+      <div class="orbit" role="tablist" aria-label="The bots" data-orbit></div>
+      <div class="world-stage" data-stage></div>
+      <noscript>
+        <p class="noscript">Turn on JavaScript to try the bots here, or open them on Telegram:
+          <a href="https://t.me/razovtech_clinic_bot">Dental Practice</a>,
+          <a href="https://t.me/razovtech_salon_bot">Beauty Salon</a>,
+          <a href="https://t.me/razovtech_medical_bot">Medical Practice</a>,
+          <a href="https://t.me/razovtech_wholesale_bot">Wholesale Catalogue</a>.</p>
+      </noscript>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="how-title" data-how>
+      <div class="how-head">
+        <h2 id="how-title" class="section-title" data-open-type>From your price list to a bot</h2>
+        <p class="section-lead">What it takes to have one of these answering for your own business.</p>
+      </div>
+      <ol class="steps" data-steps>
+        <li class="step">
+          <span class="step-dot" aria-hidden="true"></span>
+          <h3>You send what you offer</h3>
+          <p>Your services and prices, your team, your opening hours, and the questions customers ask most. A message or a photo of your price list is enough.</p>
+        </li>
+        <li class="step">
+          <span class="step-dot" aria-hidden="true"></span>
+          <h3>We set up your bot</h3>
+          <p>Your own Telegram bot, with your name and picture, speaking the way your customers write — Lebanese, Saudi, Arabizi, English or French.</p>
+        </li>
+        <li class="step">
+          <span class="step-dot" aria-hidden="true"></span>
+          <h3>It answers, day and night</h3>
+          <p>Prices, opening hours and questions are answered on the spot. Bookings and orders are taken in the chat, without a call.</p>
+        </li>
+        <li class="step">
+          <span class="step-dot" aria-hidden="true"></span>
+          <h3>You hear about every one</h3>
+          <p>Each new booking, change, cancellation, order or message arrives in your own Telegram, with the customer's name and number.</p>
+        </li>
+      </ol>
+      <div class="how-track" aria-hidden="true"><span class="how-fill" data-how-fill></span></div>
+    </section>
+
+    <section class="every" aria-labelledby="every-title">
+      <h2 id="every-title" class="section-title" data-open-type>What every bot does</h2>
+      <ul class="every-list" data-every></ul>
+    </section>
+
+    <section class="plans" id="plans" aria-labelledby="plans-title">
+      <div class="plans-head">
+        <h2 id="plans-title" class="section-title" data-open-type>Prices</h2>
+        <p class="section-lead">One price, paid once, for a bot set up for your business. The packages differ in how much is built and how fast.</p>
+      </div>
+      <div class="plans-table" data-plans></div>
+      <p class="plans-note" data-plans-note></p>
+    </section>
+
+    <section class="get" id="get" aria-labelledby="get-title">
+      <!-- The portal's star again, drawn in light: the page ends where it began. -->
+      <div class="get-dial" aria-hidden="true">
+        <svg viewBox="-50 -50 100 100">
+          <defs>
+            <linearGradient id="get-light" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ee1e6"/>
+              <stop offset="0.35" stop-color="#ff8fb3"/>
+              <stop offset="0.65" stop-color="#a3b6ff"/>
+              <stop offset="1" stop-color="#ffc857"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#get-light)" stroke-width="0.32" stroke-linejoin="round">
+            <rect x="-29" y="-29" width="58" height="58"/>
+            <rect x="-29" y="-29" width="58" height="58" transform="rotate(45)"/>
+            <circle r="41"/>
+            <circle r="46" stroke-dasharray="0.3 1.9" stroke-width="0.9"/>
+            <circle r="15"/>
+          </g>
+        </svg>
+      </div>
+      <h2 id="get-title" class="section-title" data-open-type>Want one answering for you?</h2>
+      <p class="section-lead">Tell us what your business does. We reply with what your bot would say, before you pay anything.</p>
+      <div class="get-actions" data-contact></div>
+      <p class="get-direct" data-contact-direct hidden></p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Razov Bots is a branch of <span data-root-link></span>. Phase 1.0.</p>
+    <p class="foot-small">The businesses in these demos are made up: their names, staff, prices and numbers are examples. Nothing you book with a demo bot is real.</p>
+  </footer>
+
+  <!-- Shared symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M16 2 20.09 6.11 25.9 6.1 25.89 11.91 30 16 25.89 20.09 25.9 25.9 20.09 25.89 16 30 11.91 25.89 6.1 25.9 6.11 20.09 2 16 6.11 11.91 6.1 6.1 11.91 6.11Z"/>
+    </symbol>
+  </svg>
+
+  <script src="js/bots.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/worlds.js"></script>
+  <script src="js/portal-gl.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/fx.js"></script>
+</body>
+</html>
