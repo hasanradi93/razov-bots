@@ -25,7 +25,77 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "I would like a cleaning appointment"
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "Done — I'll write to you in English. 🌐\n\nHow can I help? Pick one below, or just write to me.",
+    "keys": [
+     [
+      "📅 Book an appointment"
+     ],
+     [
+      "💬 Ask the team",
+      "📞 Call me"
+     ],
+     [
+      "🕘 Hours & prices"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Book an appointment"
+   },
+   {
+    "bot": "Of course! What do you need? 👇\nTap one below, or just tell me.",
+    "keys": [
+     [
+      "Check-up · $30"
+     ],
+     [
+      "Cleaning and polishing · $60"
+     ],
+     [
+      "Filling · $80"
+     ],
+     [
+      "Tooth extraction · $100"
+     ],
+     [
+      "Teeth whitening · $200"
+     ],
+     [
+      "Braces consultation · $40"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Cleaning and polishing · $60"
    },
    {
     "bot": "Free times for Cleaning and polishing 👇\nTap the one that suits you.",
@@ -248,7 +318,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "بدي أجّل موعدي"
+    "tap": "أجّل الموعد · 3LSTA2"
    },
    {
     "bot": "تمام، منأجّل موعد اليوم 16:00. الأوقات الفاضية 👇\nاختار الوقت يلي بيناسبك.",
@@ -343,7 +413,77 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "Je voudrais un rendez-vous pour un détartrage"
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "C'est noté — je vous écris en français. 🌐\n\nComment puis-je vous aider ? Choisissez ci-dessous, ou écrivez-moi.",
+    "keys": [
+     [
+      "📅 Prendre rendez-vous"
+     ],
+     [
+      "💬 Demander à l'équipe"
+     ],
+     [
+      "📞 Rappelez-moi"
+     ],
+     [
+      "🕘 Horaires et tarifs"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Prendre rendez-vous"
+   },
+   {
+    "bot": "Bien sûr ! De quoi avez-vous besoin ? 👇\nTouchez-en un ci-dessous, ou dites-le-moi simplement.",
+    "keys": [
+     [
+      "Consultation · $30"
+     ],
+     [
+      "Détartrage · $60",
+      "Plombage · $80"
+     ],
+     [
+      "Extraction dentaire · $100"
+     ],
+     [
+      "Blanchiment · $200"
+     ],
+     [
+      "Consultation orthodontie · $40"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Détartrage · $60"
    },
    {
     "bot": "Créneaux libres pour Détartrage 👇\nTouchez celui qui vous convient.",
@@ -412,7 +552,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "Je voudrais déplacer mon rendez-vous"
+    "tap": "Déplacer · 994AXK"
    },
    {
     "bot": "Très bien, je déplace votre rendez-vous de aujourd'hui 16:00. Créneaux libres 👇\nTouchez celui qui vous convient.",
@@ -467,24 +607,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "Je veux annuler mon rendez-vous"
-   },
-   {
-    "bot": "Vous avez un rendez-vous : demain 11:00 (994AXK). L'annuler ? Répondez « oui », ou envoyez-moi la référence.",
-    "keys": [
-     [
-      "✅ Oui, l'annuler"
-     ],
-     [
-      "↩️ Non, le garder"
-     ],
-     [
-      "🏠 Menu"
-     ]
-    ]
-   },
-   {
-    "me": "oui"
+    "tap": "Annuler · 994AXK"
    },
    {
     "bot": "❌ Le rendez-vous 994AXK est annulé\n📋 Détartrage\n🗓️ demain 11:00\n\nJe peux en réserver un autre quand vous voulez.",
@@ -526,30 +649,111 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "I'd like a men's haircut tomorrow"
+    "tap": "🌐 اللغة · Language · Langue"
    },
    {
-    "bot": "Free times for Men's haircut tomorrow 👇\nTap the one that suits you.",
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
     "keys": [
      [
-      "10:00",
-      "10:15",
-      "10:30"
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
      ],
      [
-      "10:45",
-      "11:00",
-      "11:15"
+      "🔤 Arabizi",
+      "🇬🇧 English"
      ],
      [
-      "11:30",
-      "12:30",
-      "12:45"
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "Done — I'll write to you in English. 🌐\n\nHow can I help? Pick one below, or just write to me.",
+    "keys": [
+     [
+      "📅 Book an appointment"
      ],
      [
+      "💬 Ask the team",
+      "📞 Call me"
+     ],
+     [
+      "🕘 Hours & prices"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Book an appointment"
+   },
+   {
+    "bot": "Of course! What do you need? 👇\nTap one below, or just tell me.",
+    "keys": [
+     [
+      "💇 Hair",
+      "💅 Nails"
+     ],
+     [
+      "✨ Face",
+      "🌸 Body",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "💇 Hair"
+   },
+   {
+    "bot": "💇 Hair — which one?",
+    "keys": [
+     [
+      "Women's haircut · $25"
+     ],
+     [
+      "Men's haircut · $12"
+     ],
+     [
+      "Blow-dry · $15"
+     ],
+     [
+      "Hair colour · $55"
+     ],
+     [
+      "Highlights · $85"
+     ],
+     [
+      "Keratin treatment · $120"
+     ],
+     [
+      "Beard trim · $7",
+      "📋 All services"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Men's haircut · $12"
+   },
+   {
+    "bot": "Free times for Men's haircut today 👇\nTap the one that suits you.",
+    "keys": [
+     [
+      "12:45",
       "13:00",
-      "13:15",
-      "13:30"
+      "13:15"
+     ],
+     [
+      "13:30",
+      "13:45",
+      "14:00"
      ],
      [
       "⏩ Later times",
@@ -561,10 +765,10 @@ window.RECORDED = {
     ]
    },
    {
-    "tap": "10:00"
+    "tap": "13:00"
    },
    {
-    "bot": "Good, tomorrow 10:00. Who is the appointment for? Please tell me the name.",
+    "bot": "Good, today 13:00. Who is the appointment for? Please tell me the name.",
     "keys": [
      [
       "🏠 Menu"
@@ -575,7 +779,7 @@ window.RECORDED = {
     "me": "Karim Haddad"
    },
    {
-    "bot": "Done ✅\n📋 Men's haircut\n👤 Karim Haddad\n🗓️ tomorrow 10:00 (Beirut time)\n👥 With Sami\n🔖 Your reference: 52UVXT\n\nWould you like to leave a note for the salon before your appointment?",
+    "bot": "Done ✅\n📋 Men's haircut\n👤 Karim Haddad\n🗓️ today 13:00 (Beirut time)\n👥 With Sami\n🔖 Your reference: 52UVXT\n\nWould you like to leave a note for the salon before your appointment?",
     "keys": [
      [
       "📝 Note for the salon"
@@ -592,7 +796,7 @@ window.RECORDED = {
     ]
    },
    {
-    "alert": "🆕 حجز جديد\nقص شعر رجالي لـKarim Haddad\nبكرا 10:00\nمع سامي\nرقم: 52UVXT",
+    "alert": "🆕 حجز جديد\nقص شعر رجالي لـKarim Haddad\nاليوم 13:00\nمع سامي\nرقم: 52UVXT",
     "keys": [
      [
       "✅ مأكّد",
@@ -663,21 +867,6 @@ window.RECORDED = {
    },
    {
     "alert": "💬 رسالة من زبون\nKarim Haddad · +96170000000\n«can Hiba do my nails on Saturday?»"
-   },
-   {
-    "me": "I got a rash after waxing, what cream should I use?"
-   },
-   {
-    "bot": "I am sorry to hear that. I cannot give medical advice — for a skin reaction or a scalp problem, please ask a pharmacist or a doctor. Would you like me to book you an appointment at the salon?",
-    "keys": [
-     [
-      "✅ Yes, please",
-      "No, thanks"
-     ],
-     [
-      "🏠 Menu"
-     ]
-    ]
    }
   ],
   "ar": [
@@ -824,21 +1013,256 @@ window.RECORDED = {
   ],
   "fr": [
    {
-    "me": "Bonjour, je voudrais une manucure demain"
+    "me": "/start"
    },
    {
-    "bot": "Créneaux libres pour Manucure demain 👇\nTouchez celui qui vous convient.",
+    "bot": "أهلا وسهلا! أنا مساعِدة صالون فلان للتجميل. فيك تسألني عن أوقات الدوام والأسعار، أو تحجز موعد.\n\nWelcome! I am the assistant at Doe Beauty Salon. Ask me about opening hours and prices, or book an appointment.\n\nBienvenue ! Je suis l'assistante de Salon de beauté Doe. Demandez-moi les horaires et les tarifs, ou prenez rendez-vous.",
     "keys": [
      [
-      "10:00",
-      "10:15",
-      "11:45"
+      "📅 احجز موعد",
+      "💬 اسأل الفريق"
      ],
      [
-      "12:00",
-      "12:15",
-      "12:30"
+      "📞 اتصلوا فيي"
      ],
+     [
+      "🕘 الدوام والأسعار"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "C'est noté — je vous écris en français. 🌐\n\nComment puis-je vous aider ? Choisissez ci-dessous, ou écrivez-moi.",
+    "keys": [
+     [
+      "📅 Prendre rendez-vous"
+     ],
+     [
+      "💬 Demander à l'équipe"
+     ],
+     [
+      "📞 Rappelez-moi"
+     ],
+     [
+      "🕘 Horaires et tarifs"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Prendre rendez-vous"
+   },
+   {
+    "bot": "Bien sûr ! De quoi avez-vous besoin ? 👇\nTouchez-en un ci-dessous, ou dites-le-moi simplement.",
+    "keys": [
+     [
+      "💇 Cheveux",
+      "💅 Ongles"
+     ],
+     [
+      "✨ Visage",
+      "🌸 Corps"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "💅 Ongles"
+   },
+   {
+    "bot": "💅 Ongles — que souhaitez-vous ?",
+    "keys": [
+     [
+      "Manucure · $15",
+      "Pédicure · $20"
+     ],
+     [
+      "Ongles en gel · $30"
+     ],
+     [
+      "📋 Toutes les prestations"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Manucure · $15"
+   },
+   {
+    "bot": "Créneaux libres pour Manucure aujourd'hui 👇\nTouchez celui qui vous convient.",
+    "keys": [
+     [
+      "13:15",
+      "13:30",
+      "13:45"
+     ],
+     [
+      "14:00",
+      "14:15",
+      "16:00"
+     ],
+     [
+      "⏩ Plus tard",
+      "🗓️ Autres jours"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "13:15"
+   },
+   {
+    "bot": "Très bien, aujourd'hui 13:15. À quel nom ? Indiquez-moi le nom.",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "Claire Haddad"
+   },
+   {
+    "bot": "C'est fait ✅\n📋 Manucure\n👤 Claire Haddad\n🗓️ aujourd'hui 13:15 (heure de Beyrouth)\n👥 Avec Maya\n🔖 Votre référence : GPF24D\n\nVoulez-vous laisser un mot au salon avant votre rendez-vous ?",
+    "keys": [
+     [
+      "📝 Un mot pour le salon"
+     ],
+     [
+      "Déplacer · GPF24D"
+     ],
+     [
+      "Annuler · GPF24D",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "alert": "🆕 حجز جديد\nمانيكير لـClaire Haddad\nاليوم 13:15\nمع مايا\nرقم: GPF24D",
+    "keys": [
+     [
+      "✅ مأكّد",
+      "↪️ تأجّل"
+     ],
+     [
+      "❌ انلغى",
+      "🏥 وصل"
+     ]
+    ]
+   },
+   {
+    "tap": "🏠 Menu"
+   },
+   {
+    "bot": "Comment puis-je vous aider ? Choisissez ci-dessous, ou écrivez-moi.",
+    "keys": [
+     [
+      "📅 Prendre rendez-vous"
+     ],
+     [
+      "🗓️ Mes rendez-vous"
+     ],
+     [
+      "💬 Demander à l'équipe"
+     ],
+     [
+      "📞 Rappelez-moi"
+     ],
+     [
+      "🕘 Horaires et tarifs"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Prendre rendez-vous"
+   },
+   {
+    "bot": "Bien sûr ! De quoi avez-vous besoin ? 👇\nTouchez-en un ci-dessous, ou dites-le-moi simplement.",
+    "keys": [
+     [
+      "🔁 Manucure · Maya"
+     ],
+     [
+      "💇 Cheveux",
+      "💅 Ongles"
+     ],
+     [
+      "✨ Visage",
+      "🌸 Corps"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✨ Visage"
+   },
+   {
+    "bot": "✨ Visage — que souhaitez-vous ?",
+    "keys": [
+     [
+      "Soin du visage · $40"
+     ],
+     [
+      "Maquillage · $45"
+     ],
+     [
+      "Épilation des sourcils · $6"
+     ],
+     [
+      "Extensions de cils · $50"
+     ],
+     [
+      "📋 Toutes les prestations"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Épilation des sourcils · $6"
+   },
+   {
+    "bot": "Créneaux libres pour Épilation des sourcils aujourd'hui 👇\nTouchez celui qui vous convient.",
+    "keys": [
      [
       "12:45",
       "13:00",
@@ -859,87 +1283,10 @@ window.RECORDED = {
     ]
    },
    {
-    "tap": "11:45"
+    "tap": "12:45"
    },
    {
-    "bot": "Très bien, demain 11:45. À quel nom ? Indiquez-moi le nom.",
-    "keys": [
-     [
-      "🏠 Menu"
-     ]
-    ]
-   },
-   {
-    "me": "Claire Haddad"
-   },
-   {
-    "bot": "C'est fait ✅\n📋 Manucure\n👤 Claire Haddad\n🗓️ demain 11:45 (heure de Beyrouth)\n👥 Avec Maya\n🔖 Votre référence : GPF24D\n\nVoulez-vous laisser un mot au salon avant votre rendez-vous ?",
-    "keys": [
-     [
-      "📝 Un mot pour le salon"
-     ],
-     [
-      "Déplacer · GPF24D"
-     ],
-     [
-      "Annuler · GPF24D",
-      "🏠 Menu"
-     ]
-    ]
-   },
-   {
-    "alert": "🆕 حجز جديد\nمانيكير لـClaire Haddad\nبكرا 11:45\nمع مايا\nرقم: GPF24D",
-    "keys": [
-     [
-      "✅ مأكّد",
-      "↪️ تأجّل"
-     ],
-     [
-      "❌ انلغى",
-      "🏥 وصل"
-     ]
-    ]
-   },
-   {
-    "me": "et une épilation des sourcils demain aussi"
-   },
-   {
-    "bot": "Créneaux libres pour Épilation des sourcils demain 👇\nTouchez celui qui vous convient.",
-    "keys": [
-     [
-      "10:00",
-      "10:15",
-      "10:30"
-     ],
-     [
-      "10:45",
-      "11:00",
-      "11:15"
-     ],
-     [
-      "11:30",
-      "11:45",
-      "12:00"
-     ],
-     [
-      "12:15",
-      "12:30",
-      "12:45"
-     ],
-     [
-      "⏩ Plus tard",
-      "🗓️ Autres jours"
-     ],
-     [
-      "🏠 Menu"
-     ]
-    ]
-   },
-   {
-    "tap": "10:15"
-   },
-   {
-    "bot": "Très bien, demain 10:15. Le rendez-vous est pour Claire Haddad ? Si c'est pour quelqu'un d'autre, dites-moi le nom.",
+    "bot": "Très bien, aujourd'hui 12:45. Le rendez-vous est pour Claire Haddad ? Si c'est pour quelqu'un d'autre, dites-moi le nom.",
     "keys": [
      [
       "Claire Haddad",
@@ -954,7 +1301,7 @@ window.RECORDED = {
     "tap": "Claire Haddad"
    },
    {
-    "bot": "C'est fait ✅\n📋 Épilation des sourcils\n👤 Claire Haddad\n🗓️ demain 10:15 (heure de Beyrouth)\n👥 Avec Lara\n🔖 Votre référence : M9NGT9\n\nVoulez-vous laisser un mot au salon avant votre rendez-vous ?",
+    "bot": "C'est fait ✅\n📋 Épilation des sourcils\n👤 Claire Haddad\n🗓️ aujourd'hui 12:45 (heure de Beyrouth)\n👥 Avec Lara\n🔖 Votre référence : M9NGT9\n\nVoulez-vous laisser un mot au salon avant votre rendez-vous ?",
     "keys": [
      [
       "📝 Un mot pour le salon"
@@ -969,7 +1316,7 @@ window.RECORDED = {
     ]
    },
    {
-    "alert": "🆕 حجز جديد\nترتيب حواجب لـClaire Haddad\nبكرا 10:15\nمع لارا\nرقم: M9NGT9",
+    "alert": "🆕 حجز جديد\nترتيب حواجب لـClaire Haddad\nاليوم 12:45\nمع لارا\nرقم: M9NGT9",
     "keys": [
      [
       "✅ مأكّد",
@@ -980,16 +1327,75 @@ window.RECORDED = {
       "🏥 وصل"
      ]
     ]
+   },
+   {
+    "teamTap": "✅ مأكّد"
+   },
+   {
+    "teamBot": "M9NGT9 → ✅ مأكّد. خبّرنا الزبون.",
+    "keys": [
+     [
+      "↪️ تأجّل",
+      "❌ انلغى"
+     ],
+     [
+      "🏥 وصل"
+     ]
+    ]
+   },
+   {
+    "bot": "✅ Votre rendez-vous chez Salon de beauté Doe est confirmé : Épilation des sourcils, aujourd'hui 12:45. À bientôt !"
    }
   ]
  },
  "medical": {
   "en": [
    {
-    "me": "hello"
+    "me": "/start"
    },
    {
-    "bot": "How can I help? Pick one below, or just write to me.\n\nIf this is an emergency, call 140 now or go to the nearest emergency room. Do not wait for an appointment, or for a reply here.",
+    "bot": "أهلا وسهلا! أنا مساعِدة عيادة فلان الطبية. كيف فيني ساعدك؟\n\nWelcome! I am the assistant at Doe Medical Centre. How can I help you?\n\nBienvenue ! Je suis l'assistante de Centre médical Doe. Comment puis-je vous aider ?",
+    "keys": [
+     [
+      "📅 احجز موعد",
+      "💬 اسأل الفريق"
+     ],
+     [
+      "📞 اتصلوا فيي"
+     ],
+     [
+      "🕘 الدوام والأسعار"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "Done — I'll write to you in English. 🌐\n\nHow can I help? Pick one below, or just write to me.\n\nIf this is an emergency, call 140 now or go to the nearest emergency room. Do not wait for an appointment, or for a reply here.",
     "keys": [
      [
       "📅 Book an appointment"
@@ -1161,7 +1567,23 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "1"
+    "tap": "🩺 زيارة الطبيب"
+   },
+   {
+    "bot": "🩺 زيارة الطبيب — شو بدك؟",
+    "keys": [
+     [
+      "كشف عام · $40",
+      "مراجعة · $20"
+     ],
+     [
+      "📋 كل الخدمات",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "كشف عام · $40"
    },
    {
     "bot": "المواعيد الفاضية لـكشف عام اليوم 👇\nاختار الوقت يلي بيناسبك.",
@@ -1241,18 +1663,6 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "عندي وجع راس، شو اخد؟"
-   },
-   {
-    "bot": "سلامتك! ما فيني أعطي نصيحة طبية — الدكتور وحده بيقدر. إذا بدك الدكتور يعرف قبل موعدك، دوس تحت واكتبها كملاحظة. وإذا الحالة طارئة، اتصل على 140 أو روح عأقرب طوارئ.",
-    "keys": [
-     [
-      "📝 ملاحظة للدكتور",
-      "🏠 القائمة"
-     ]
-    ]
-   },
-   {
     "me": "عندي وجع بصدري وضيق نفس"
    },
    {
@@ -1287,10 +1697,53 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "j'ai de la fièvre, je voudrais un rendez-vous"
+    "tap": "🌐 اللغة · Language · Langue"
    },
    {
-    "bot": "Je suis désolée de l'apprendre. Je ne peux pas donner de conseil médical, mais le médecin peut vous recevoir — prenons rendez-vous.\n\nBien sûr ! De quoi avez-vous besoin ? 👇\nTouchez-en un ci-dessous, ou dites-le-moi simplement.",
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "C'est noté — je vous écris en français. 🌐\n\nComment puis-je vous aider ? Choisissez ci-dessous, ou écrivez-moi.\n\nS'il s'agit d'une urgence, appelez le 140 maintenant ou allez aux urgences les plus proches. N'attendez pas un rendez-vous, ni une réponse ici.",
+    "keys": [
+     [
+      "📅 Prendre rendez-vous"
+     ],
+     [
+      "💬 Demander à l'équipe"
+     ],
+     [
+      "📞 Rappelez-moi"
+     ],
+     [
+      "🕘 Horaires et tarifs"
+     ],
+     [
+      "🌐 اللغة · Language · Langue"
+     ]
+    ]
+   },
+   {
+    "tap": "📅 Prendre rendez-vous"
+   },
+   {
+    "bot": "Bien sûr ! De quoi avez-vous besoin ? 👇\nTouchez-en un ci-dessous, ou dites-le-moi simplement.",
     "keys": [
      [
       "🩺 Consultations"
@@ -1313,7 +1766,27 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "1"
+    "tap": "🩺 Consultations"
+   },
+   {
+    "bot": "🩺 Consultations — que souhaitez-vous ?",
+    "keys": [
+     [
+      "Consultation · $40"
+     ],
+     [
+      "Visite de suivi · $20"
+     ],
+     [
+      "📋 Toutes les prestations"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Consultation · $40"
    },
    {
     "bot": "Créneaux libres pour Consultation aujourd'hui 👇\nTouchez celui qui vous convient.",
@@ -1431,7 +1904,47 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "Hello, can I see the catalogue?"
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "✅ Done — we'll carry on in English.\nHow can I help? Choose:",
+    "keys": [
+     [
+      "🛒 Sales",
+      "📦 My orders"
+     ],
+     [
+      "💳 Accounts",
+      "📞 Call me"
+     ],
+     [
+      "🌐 Language",
+      "❓ Help"
+     ]
+    ]
+   },
+   {
+    "tap": "🛒 Sales"
    },
    {
     "bot": "Which section would you like? Or write the product's name.\n1. 🫒 Oils\n2. 🌾 Rice & grains\n3. 🍗 Chicken & meat\n4. 🧀 Dairy & cheese\n5. 🥫 Canned food\n6. 🥬 Vegetables & fruit\n7. 🍞 Bread & bakery\n8. ☕ Coffee, tea & sugar\n9. 🍫 Sweets & snacks\n10. 🌶 Spices\n11. 🥤 Drinks\n12. 🧽 Cleaning\n13. 📦 Other",
@@ -1744,6 +2257,24 @@ window.RECORDED = {
       "❌ إلغاء"
      ]
     ]
+   },
+   {
+    "teamTap": "✅ تأكّدت"
+   },
+   {
+    "teamBot": "8S2UPJ ← ✅ تأكّدت. الزبون عرف.",
+    "keys": [
+     [
+      "🚚 بالطريق",
+      "❌ إلغاء"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "bot": "✅ Your order 8S2UPJ is confirmed. We'll tell you as soon as it leaves."
    }
   ],
   "ar": [
@@ -1994,7 +2525,162 @@ window.RECORDED = {
   ],
   "fr": [
    {
-    "me": "Bonjour, je voudrais 12 packs d'eau minérale 1,5 L"
+    "me": "/start"
+   },
+   {
+    "bot": "أهلا وسهلا بـدو للجملة 👋\nاطلب بضاعتك من هون — مع الصور والأسعار — تابع طلبياتك، وتواصل مع الفريق.\nاختار من تحت، أو اكتب شو بدك.\n\nWelcome to Doe Wholesale 👋\nOrder your stock here — with photos and prices — follow your orders, and reach the team.\nChoose below, or just write what you need.",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🛒 المبيعات",
+      "📦 طلبياتي"
+     ],
+     [
+      "💳 الحسابات",
+      "📞 اتصلوا فيي"
+     ],
+     [
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "✅ C'est fait — nous continuons en français.\nComment puis-je vous aider ? Choisissez :",
+    "keys": [
+     [
+      "🛒 Ventes",
+      "📦 Mes commandes"
+     ],
+     [
+      "💳 Comptabilité",
+      "📞 Rappelez-moi"
+     ],
+     [
+      "🌐 Langue",
+      "❓ Aide"
+     ]
+    ]
+   },
+   {
+    "tap": "🛒 Ventes"
+   },
+   {
+    "bot": "Quel rayon voulez-vous voir ? Ou écrivez le nom du produit.\n1. 🫒 Huiles\n2. 🌾 Riz et céréales\n3. 🍗 Volaille et viande\n4. 🧀 Produits laitiers\n5. 🥫 Conserves\n6. 🥬 Fruits et légumes\n7. 🍞 Pain et viennoiseries\n8. ☕ Café, thé et sucre\n9. 🍫 Confiserie et snacks\n10. 🌶 Épices\n11. 🥤 Boissons\n12. 🧽 Entretien\n13. 📦 Divers",
+    "keys": [
+     [
+      "🫒 Huiles"
+     ],
+     [
+      "🌾 Riz et céréales"
+     ],
+     [
+      "🍗 Volaille et viande"
+     ],
+     [
+      "🧀 Produits laitiers"
+     ],
+     [
+      "🥫 Conserves"
+     ],
+     [
+      "🥬 Fruits et légumes"
+     ],
+     [
+      "🍞 Pain et viennoiseries"
+     ],
+     [
+      "☕ Café, thé et sucre"
+     ],
+     [
+      "🍫 Confiserie et snacks"
+     ],
+     [
+      "🌶 Épices",
+      "🥤 Boissons"
+     ],
+     [
+      "🧽 Entretien",
+      "📦 Divers"
+     ],
+     [
+      "🧾 Ma commande",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🥤 Boissons"
+   },
+   {
+    "bot": "🥤 Boissons :\n1. Eau minérale 0,5 L — dès $3.30 / pack\n2. Eau minérale 1,5 L — dès $2.15 / pack\n3. Jus citron-menthe 1 L — dès $14.00 / carton\n\nTouchez un produit pour voir sa photo et son prix.",
+    "keys": [
+     [
+      "1. Eau minérale 0,5 L"
+     ],
+     [
+      "2. Eau minérale 1,5 L"
+     ],
+     [
+      "3. Jus citron-menthe 1 L"
+     ],
+     [
+      "⬅️ Le catalogue",
+      "🧾 Ma commande"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "2. Eau minérale 1,5 L"
+   },
+   {
+    "photo": "assets/ws-water.svg",
+    "caption": "Eau minérale 1,5 L\nDoe Springs. Vendu par six packs.\n\nVendu au pack (6 × 1,5 L)\nPrix par pack :\n• à partir de 6 : $2.40\n• à partir de 60 : $2.15\nMinimum : 6\nVendu par multiples de 6\n\n✅ En stock\nCombien ? Touchez un bouton ou écrivez la quantité.",
+    "keys": [
+     [
+      "➕ 6",
+      "➕ 12",
+      "➕ 24"
+     ],
+     [
+      "🔢 Autre quantité",
+      "⬅️ 🥤 Boissons"
+     ],
+     [
+      "🧾 Ma commande",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "➕ 12"
    },
    {
     "bot": "✅ C'est noté — Eau minérale 1,5 L: 12 × $2.40 = $28.80\nCommande en cours : $28.80",
@@ -2012,7 +2698,55 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "et 10 cartons de jus"
+    "tap": "⬅️ 🥤 Boissons"
+   },
+   {
+    "bot": "🥤 Boissons :\n1. Eau minérale 0,5 L — dès $3.30 / pack\n2. Eau minérale 1,5 L — dès $2.15 / pack\n3. Jus citron-menthe 1 L — dès $14.00 / carton\n\nTouchez un produit pour voir sa photo et son prix.",
+    "keys": [
+     [
+      "1. Eau minérale 0,5 L"
+     ],
+     [
+      "2. Eau minérale 1,5 L"
+     ],
+     [
+      "3. Jus citron-menthe 1 L"
+     ],
+     [
+      "⬅️ Le catalogue",
+      "🧾 Ma commande"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "3. Jus citron-menthe 1 L"
+   },
+   {
+    "photo": "assets/ws-juice.svg",
+    "caption": "Jus citron-menthe 1 L\nDoe Springs, sans sucre ajouté.\n\nVendu au carton (12 × 1 L)\nPrix par carton :\n• à partir de 1 : $15.00\n• à partir de 10 : $14.00\n\n⚠️ Stock faible — l'équipe vous confirme la quantité\nCombien ? Touchez un bouton ou écrivez la quantité.",
+    "keys": [
+     [
+      "➕ 1 carton",
+      "➕ 5"
+     ],
+     [
+      "➕ 10",
+      "🔢 Autre quantité"
+     ],
+     [
+      "⬅️ 🥤 Boissons",
+      "🧾 Ma commande"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "➕ 10"
    },
    {
     "bot": "✅ C'est noté — Jus citron-menthe 1 L: 10 × $14.00 = $140.00\nCommande en cours : $168.80",
@@ -2033,7 +2767,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "envoyer la commande"
+    "tap": "✅ Envoyer la commande"
    },
    {
     "bot": "Envoyons-la 🚚 Où va cette commande ?",
@@ -2048,6 +2782,17 @@ window.RECORDED = {
      ],
      [
       "📍 Autre lieu",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🏪 Magasin"
+   },
+   {
+    "bot": "Quel est le nom du magasin ?",
+    "keys": [
+     [
       "🏠 Menu"
      ]
     ]
@@ -2096,7 +2841,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "Nord"
+    "tap": "Nord (Tripoli)"
    },
    {
     "bot": "L'adresse à Nord (Tripoli) — rue, immeuble, et un repère à proximité :",
@@ -2144,7 +2889,7 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "oui"
+    "tap": "✅ Oui, envoyez"
    },
    {
     "bot": "✅ Commande U2WSES reçue. L'équipe vous appellera au 71000000 pour confirmer la livraison.",
@@ -2172,10 +2917,53 @@ window.RECORDED = {
  "electronics": {
   "en": [
    {
-    "me": "hello"
+    "me": "/start"
    },
    {
-    "bot": "Welcome to Doe Electronics 👋\nPhones, laptops, gaming, cameras and accessories — and repairs too.\nChoose what you need, or just write it in your own words.",
+    "bot": "أهلا وسهلا بـدو للإلكترونيات 👋\nتلفونات، لابتوبات، ألعاب، كاميرات وإكسسوارات — وصيانة كمان.\nاختار شو بدك، أو اكتبلي بكلماتك.\n\nWelcome to Doe Electronics 👋\nPhones, laptops, gaming, cameras and accessories — and repairs too.\nChoose what you need, or just write it in your own words.",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🛒 المحل",
+      "📦 طلبياتي"
+     ],
+     [
+      "🔧 صيانة",
+      "❓ أسئلة"
+     ],
+     [
+      "📞 اتصلوا فيي",
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "✅ Done — we'll carry on in English.\nHow can I help? Choose:",
     "keys": [
      [
       "🛒 Shop",
@@ -2195,10 +2983,184 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "samsung phone under 400$ with 6gb ram"
+    "tap": "🛒 Shop"
    },
    {
-    "bot": "📱 Phones\n🔎 2 match (up to $400 · Samsung · 6 GB RAM or more) — cheapest first:\n1. Samsung Galaxy A36 · 128 GB — $349.00 / piece\n2. Samsung Galaxy A36 · 256 GB — $399.00 / piece",
+    "bot": "Which section would you like? Or write the product's name.\n1. 📱 Phones\n2. 💻 Laptops\n3. 📲 Tablets\n4. 🎮 Gaming\n5. 📷 Cameras\n6. 🎙️ Lights, mics & tripods\n7. ⌚ Smart gadgets\n8. 🔥 IQOS · 18+\n9. 🔌 Accessories",
+    "keys": [
+     [
+      "📱 Phones",
+      "💻 Laptops"
+     ],
+     [
+      "📲 Tablets",
+      "🎮 Gaming"
+     ],
+     [
+      "📷 Cameras"
+     ],
+     [
+      "🎙️ Lights, mics & tripods"
+     ],
+     [
+      "⌚ Smart gadgets",
+      "🔥 IQOS · 18+"
+     ],
+     [
+      "🔌 Accessories",
+      "🧾 My order"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "📱 Phones"
+   },
+   {
+    "bot": "📱 Phones — 48 models, from $99.00.\nPick a brand, or let me help you choose by budget, brand, RAM, storage.\nOr just write it: \"Samsung under $400 with 8 GB RAM\".",
+    "keys": [
+     [
+      "🔎 Help me choose",
+      "🏷 Apple"
+     ],
+     [
+      "🏷 Samsung",
+      "🏷 Xiaomi"
+     ],
+     [
+      "🏷 Google",
+      "🏷 Honor"
+     ],
+     [
+      "🏷 Infinix",
+      "🏷 Tecno"
+     ],
+     [
+      "📋 All 48",
+      "⬅️ Catalogue"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🔎 Help me choose"
+   },
+   {
+    "bot": "📱 Phones — 💰 What's your budget?",
+    "keys": [
+     [
+      "Under $200",
+      "$200 – $400"
+     ],
+     [
+      "$400 – $700",
+      "$700 – $1,000"
+     ],
+     [
+      "Over $1,000",
+      "🤷 Doesn't matter"
+     ],
+     [
+      "✅ Show me now",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "$200 – $400"
+   },
+   {
+    "bot": "📱 Phones — 🏷 Any brand you prefer?\nSo far: $200 – $400",
+    "keys": [
+     [
+      "Apple",
+      "Samsung"
+     ],
+     [
+      "Xiaomi",
+      "Google",
+      "Honor"
+     ],
+     [
+      "Infinix",
+      "Tecno"
+     ],
+     [
+      "🤷 Doesn't matter",
+      "✅ Show me now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Samsung"
+   },
+   {
+    "bot": "📱 Phones — 🧠 How much RAM at least?\nSo far: $200 – $400 · Samsung",
+    "keys": [
+     [
+      "4 GB RAM or more",
+      "6 GB RAM or more"
+     ],
+     [
+      "8 GB RAM or more"
+     ],
+     [
+      "12 GB RAM or more"
+     ],
+     [
+      "16 GB RAM or more"
+     ],
+     [
+      "🤷 Doesn't matter",
+      "✅ Show me now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "6 GB RAM or more"
+   },
+   {
+    "bot": "📱 Phones — 💾 How much storage at least?\nSo far: $200 – $400 · Samsung · 6 GB RAM or more",
+    "keys": [
+     [
+      "64 GB storage or more"
+     ],
+     [
+      "128 GB storage or more"
+     ],
+     [
+      "256 GB storage or more"
+     ],
+     [
+      "512 GB storage or more"
+     ],
+     [
+      "1 TB storage or more"
+     ],
+     [
+      "🤷 Doesn't matter",
+      "✅ Show me now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🤷 Doesn't matter"
+   },
+   {
+    "bot": "📱 Phones\n🔎 2 match ($200 – $400 · Samsung · 6 GB RAM or more) — cheapest first:\n1. Samsung Galaxy A36 · 128 GB — $349.00 / piece\n2. Samsung Galaxy A36 · 256 GB — $399.00 / piece",
     "keys": [
      [
       "1. Samsung Galaxy A36 · 128 GB"
@@ -2274,7 +3236,26 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "send the order"
+    "tap": "➕ Tempered glass screen protector · $12.00"
+   },
+   {
+    "bot": "✅ Done — Tempered glass screen protector: 1 × $12.00 = $12.00\nOrder so far: $361.00",
+    "keys": [
+     [
+      "✏️ Tempered glass screen protector"
+     ],
+     [
+      "🧾 My order",
+      "⬅️ 🔌 Accessories"
+     ],
+     [
+      "✅ Send the order",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Send the order"
    },
    {
     "bot": "Let's send it 🚚 Where is this order going — or will you pick it up at the shop?",
@@ -2343,7 +3324,7 @@ window.RECORDED = {
     "tap": "Saturday 17/10"
    },
    {
-    "bot": "Here's your order:\n\n1. Samsung Galaxy A36 · 128 GB (⚫ Black)\n     1 × $349.00 = $349.00\n──────────\nGoods: $349.00\nDelivery: free\nTotal: $349.00\n\n🏬 Pick up from the shop (Hamra) — Lina Haddad\n📞 +96170000000\n🗓 Saturday 17/10\n\nSend it? Reply \"yes\" to send.",
+    "bot": "Here's your order:\n\n1. Samsung Galaxy A36 · 128 GB (⚫ Black)\n     1 × $349.00 = $349.00\n2. Tempered glass screen protector\n     1 × $12.00 = $12.00\n──────────\nGoods: $361.00\nDelivery: free\nTotal: $361.00\n\n🏬 Pick up from the shop (Hamra) — Lina Haddad\n📞 +96170000000\n🗓 Saturday 17/10\n\nSend it? Reply \"yes\" to send.",
     "keys": [
      [
       "✅ Yes, send it",
@@ -2380,7 +3361,7 @@ window.RECORDED = {
     ]
    },
    {
-    "alert": "🆕 طلبية جديدة U9AKYP\n🏬 استلام من المحل\n👤 Lina Haddad\n📞 +96170000000 (مأكّد من تلغرام)\n📍 استلام من المحل (الحمرا) — 🏬\n🚚 السبت 17/10\n\n• A36-01 سامسونج جالكسي A36 · 128 جيغا (⚫ أسود): 1 × $349.00 = $349.00\n\nالبضاعة: $349.00\nالتوصيل: مجاناً\nالمجموع: $349.00",
+    "alert": "🆕 طلبية جديدة U9AKYP\n🏬 استلام من المحل\n👤 Lina Haddad\n📞 +96170000000 (مأكّد من تلغرام)\n📍 استلام من المحل (الحمرا) — 🏬\n🚚 السبت 17/10\n\n• A36-01 سامسونج جالكسي A36 · 128 جيغا (⚫ أسود): 1 × $349.00 = $349.00\n• AK-04 لزقة حماية شاشة زجاج: 1 × $12.00 = $12.00\n\nالبضاعة: $361.00\nالتوصيل: مجاناً\nالمجموع: $361.00",
     "keys": [
      [
       "✅ تأكّدت",
@@ -2588,10 +3569,53 @@ window.RECORDED = {
   ],
   "fr": [
    {
-    "me": "bonjour"
+    "me": "/start"
    },
    {
-    "bot": "Bienvenue chez Doe Électronique 👋\nTéléphones, ordinateurs, jeux, caméras et accessoires — et réparations aussi.\nChoisissez, ou écrivez-moi simplement ce qu'il vous faut.",
+    "bot": "أهلا وسهلا بـدو للإلكترونيات 👋\nتلفونات، لابتوبات، ألعاب، كاميرات وإكسسوارات — وصيانة كمان.\nاختار شو بدك، أو اكتبلي بكلماتك.\n\nWelcome to Doe Electronics 👋\nPhones, laptops, gaming, cameras and accessories — and repairs too.\nChoose what you need, or just write it in your own words.",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🛒 المحل",
+      "📦 طلبياتي"
+     ],
+     [
+      "🔧 صيانة",
+      "❓ أسئلة"
+     ],
+     [
+      "📞 اتصلوا فيي",
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "✅ C'est fait — nous continuons en français.\nComment puis-je vous aider ? Choisissez :",
     "keys": [
      [
       "🛒 Boutique",
@@ -2611,34 +3635,68 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "je cherche un ordinateur pas cher"
+    "tap": "🛒 Boutique"
    },
    {
-    "bot": "Les Ordinateurs portables les plus abordables :\n1. Acer Aspire 3 · i3 · 8/256 — $349.00 / pièce\n2. HP 250 G10 · i3 · 8/256 — $379.00 / pièce\n3. Lenovo IdeaPad Slim 3 · i3 · 8/256 — $399.00 / pièce\n4. Toshiba Dynabook Satellite Pro C40 · i3 · 8/256 — $449.00 / pièce\n5. Asus Vivobook 15 · i5 · 8/512 — $499.00 / pièce\n6. Dell Inspiron 15 · i5 · 8/512 — $549.00 / pièce",
+    "bot": "Quel rayon voulez-vous voir ? Ou écrivez le nom du produit.\n1. 📱 Téléphones\n2. 💻 Ordinateurs portables\n3. 📲 Tablettes\n4. 🎮 Jeux vidéo\n5. 📷 Appareils photo\n6. 🎙️ Lumières, micros et trépieds\n7. ⌚ Objets connectés\n8. 🔥 IQOS · 18+\n9. 🔌 Accessoires",
     "keys": [
      [
-      "1. Acer Aspire 3 · i3 · 8/256"
+      "📱 Téléphones"
      ],
      [
-      "2. HP 250 G10 · i3 · 8/256"
+      "💻 Ordinateurs portables"
      ],
      [
-      "3. Lenovo IdeaPad Slim 3 · i3 · 8/256"
+      "📲 Tablettes",
+      "🎮 Jeux vidéo"
      ],
      [
-      "4. Toshiba Dynabook Satellite Pro C40 · i3 · 8/256"
+      "📷 Appareils photo"
      ],
      [
-      "5. Asus Vivobook 15 · i5 · 8/512"
+      "🎙️ Lumières, micros et trépieds"
      ],
      [
-      "6. Dell Inspiron 15 · i5 · 8/512"
+      "⌚ Objets connectés"
      ],
      [
-      "🗂 Le catalogue"
+      "🔥 IQOS · 18+",
+      "🔌 Accessoires"
      ],
      [
-      "💬 Parler à l'équipe"
+      "🧾 Ma commande",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "💻 Ordinateurs portables"
+   },
+   {
+    "bot": "💻 Ordinateurs portables — 36 modèles, dès $349.00.\nChoisissez une marque, ou laissez-moi vous aider selon budget, marque, RAM, stockage.\nOu écrivez-le : « Dell à moins de $800 avec 8 Go de RAM ».",
+    "keys": [
+     [
+      "🔎 Aidez-moi à choisir"
+     ],
+     [
+      "🏷 Apple",
+      "🏷 Dell"
+     ],
+     [
+      "🏷 HP",
+      "🏷 Lenovo"
+     ],
+     [
+      "🏷 Asus",
+      "🏷 Acer"
+     ],
+     [
+      "🏷 Toshiba",
+      "🏷 MSI"
+     ],
+     [
+      "📋 Tous (36)",
+      "⬅️ Le catalogue"
      ],
      [
       "🏠 Menu"
@@ -2646,11 +3704,47 @@ window.RECORDED = {
     ]
    },
    {
-    "tap": "1. Acer Aspire 3 · i3 · 8/256"
+    "tap": "🏷 Lenovo"
+   },
+   {
+    "bot": "💻 Ordinateurs portables\n🔎 6 correspondent (Lenovo) — du moins cher au plus cher :\n1. Lenovo IdeaPad Slim 3 · i3 · 8/256 — $399.00 / pièce\n2. Lenovo IdeaPad Slim 5 · Ryzen 7 · 16/512 — $649.00 / pièce\n3. Lenovo ThinkPad E14 · i5 · 16/512 — $799.00 / pièce\n4. Lenovo LOQ 15 · RTX 4050 · 16/512 — $899.00 / pièce\n5. Lenovo Legion 5 · RTX 4060 · 16/1TB — $1,299.00 / pièce\n6. Lenovo ThinkPad X1 Carbon · Ultra 7 · 32/1TB — $1,899.00 / pièce",
+    "keys": [
+     [
+      "1. Lenovo IdeaPad Slim 3 · i3 · 8/256"
+     ],
+     [
+      "2. Lenovo IdeaPad Slim 5 · Ryzen 7 · 16/512"
+     ],
+     [
+      "3. Lenovo ThinkPad E14 · i5 · 16/512"
+     ],
+     [
+      "4. Lenovo LOQ 15 · RTX 4050 · 16/512"
+     ],
+     [
+      "5. Lenovo Legion 5 · RTX 4060 · 16/1TB"
+     ],
+     [
+      "6. Lenovo ThinkPad X1 Carbon · Ultra 7 · 32/1TB"
+     ],
+     [
+      "🔁 Changer mes choix"
+     ],
+     [
+      "⬅️ 💻 Ordinateurs portables"
+     ],
+     [
+      "🧾 Ma commande",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "1. Lenovo IdeaPad Slim 3 · i3 · 8/256"
    },
    {
     "photo": "assets/el-laptop.svg",
-    "caption": "Acer Aspire 3 · i3 · 8/256\nNeuf, un an de garantie boutique. Configuré sur demande.\n\nVendu au pièce (15.6\" · Core i3-N305 · 8 GB RAM · 256 GB SSD)\nPrix par pièce :\n• à partir de 1 : $349.00\nMaximum par commande : 2\n\n✅ En stock\nCombien ? Touchez un bouton ou écrivez la quantité.",
+    "caption": "Lenovo IdeaPad Slim 3 · i3 · 8/256\nNeuf, un an de garantie boutique. Configuré sur demande.\n\nVendu au pièce (15.6\" · Core i3-1215U · 8 GB RAM · 256 GB SSD)\nPrix par pièce :\n• à partir de 1 : $399.00\nMaximum par commande : 2\n\n✅ En stock\nCombien ? Touchez un bouton ou écrivez la quantité.",
     "keys": [
      [
       "➕ 1 pièce",
@@ -2688,7 +3782,7 @@ window.RECORDED = {
     "tap": "➕ 1 pièce"
    },
    {
-    "bot": "✅ C'est noté — Acer Aspire 3 · i3 · 8/256: 1 × $349.00 = $349.00\nCommande en cours : $349.00\n🧩 Va bien avec :",
+    "bot": "✅ C'est noté — Lenovo IdeaPad Slim 3 · i3 · 8/256: 1 × $399.00 = $399.00\nCommande en cours : $399.00\n🧩 Va bien avec :",
     "keys": [
      [
       "➕ Targus 15.6\" laptop backpack · $45.00"
@@ -2700,7 +3794,7 @@ window.RECORDED = {
       "➕ Ugreen USB-C hub 7-in-1 · $39.00"
      ],
      [
-      "✏️ Acer Aspire 3 · i3 · 8/256"
+      "✏️ Lenovo IdeaPad Slim 3 · i3 · 8/256"
      ],
      [
       "🧾 Ma commande"

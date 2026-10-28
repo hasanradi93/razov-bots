@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#f6ffe8"/><stop offset="1" stop-color="#bfe08a"/></radialGradient>
+    <linearGradient id="carton" x1="0" x2="1"><stop offset="0" stop-color="#e9f5d4"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#d6ebb5"/></linearGradient>
+    <linearGradient id="side" x1="0" x2="1"><stop offset="0" stop-color="#b9d98a"/><stop offset="1" stop-color="#9cc56a"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="268" rx="90" ry="9" fill="#4f6b1c" opacity=".22"/>
+  <path d="M152 70l20-28h56l-20 28z" fill="#cfe7a9"/>
+  <path d="M208 70l20-28 20 28z" fill="#a9cf78"/>
+  <rect x="152" y="70" width="56" height="192" fill="url(#carton)"/>
+  <path d="M208 70h40v184l-40 8z" fill="url(#side)"/>
+  <rect x="186" y="34" width="12" height="12" rx="2" fill="#4f8a1f"/>
+  <circle cx="180" cy="128" r="20" fill="#f2e04a"/>
+  <circle cx="180" cy="128" r="14" fill="#fff6a8"/>
+  <path d="M180 114v28M166 128h28M170 118l20 20M190 118l-20 20" stroke="#f2e04a" stroke-width="1.5"/>
+  <path d="M188 104c8-10 18-12 24-10-4 8-14 12-24 10z" fill="#4f9a2b"/>
+  <path d="M168 106c-6-9-4-16 0-20 5 6 5 14 0 20z" fill="#3f8a22"/>
+  <text x="180" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#2f5a12" letter-spacing="1">DOE</text>
+  <text x="180" y="196" text-anchor="middle" font-family="Georgia, serif" font-size="8.5" fill="#2f5a12">Lemon-mint</text>
+  <text x="180" y="208" text-anchor="middle" font-family="Georgia, serif" font-size="8.5" fill="#2f5a12">juice · 1 L</text>
+</svg>

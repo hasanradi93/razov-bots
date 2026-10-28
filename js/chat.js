@@ -585,9 +585,17 @@
       log.append(intro);
       // Ways to begin: Start, then each language's first message from the replays.
       chips.replaceChildren();
-      // Not a bare greeting: Start already says hello.
+      // Start, and the request of each conversation that opens by writing it rather than by buttons
+      // (a bare greeting is not one: Start already says hello).
       const greeting = /^(hello|hi|bonjour|مرحبا)$/i;
-      const openers = ["/start", ...langs.map((lang) => (stepsOf(lang).find((st) => "me" in st && st.me !== "/start" && !greeting.test(st.me)) || {}).me).filter(Boolean)];
+      const opening = (lang) => {
+        for (const st of stepsOf(lang)) {
+          if ("tap" in st) return null;
+          if ("me" in st && st.me !== "/start" && !greeting.test(st.me)) return st.me;
+        }
+        return null;
+      };
+      const openers = ["/start", ...langs.map(opening).filter(Boolean)];
       for (const text of openers) {
         const chip = el("button", "chip", text === "/start" ? "Start" : text);
         chip.type = "button";
