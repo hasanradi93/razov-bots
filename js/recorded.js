@@ -4197,7 +4197,7 @@ window.RECORDED = {
     "tap": "✅ Add · $23.00"
    },
    {
-    "bot": "✅ Added: 2 × Cheeseburger (BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)) — $23.00\n🧾 Basket so far: $19.00",
+    "bot": "✅ Added: 2 × Cheeseburger (BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)) — $23.00\n🔥 Tuesday: second burger half price: −$4.00\n🧾 Basket so far: $19.00",
     "keys": [
      [
       "✏️ Cheeseburger",
@@ -4763,22 +4763,239 @@ window.RECORDED = {
     ]
    },
    {
-    "me": "2 cheeseburgers dont un sans oignons"
+    "me": "c'est halal ?"
    },
    {
-    "bot": "✅ Ajouté : 1 × Cheeseburger — $7.00\n✅ Ajouté : 1 × Cheeseburger (Sans oignons) — $7.00\n🧾 Panier pour l'instant : $10.50",
+    "bot": "Oui — toute notre viande et notre poulet sont halal, et il n'y a pas de porc à la carte.",
     "keys": [
      [
-      "✏️ Modifier le dernier"
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🏠 Menu"
+   },
+   {
+    "bot": "Comment puis-je vous aider ? Choisissez :",
+    "keys": [
+     [
+      "🍔 Commander",
+      "🔥 Offres"
+     ],
+     [
+      "📦 Mes commandes",
+      "❓ Questions"
+     ],
+     [
+      "📞 Rappelez-moi",
+      "🌐 Langue"
+     ],
+     [
+      "❓ Aide"
+     ]
+    ]
+   },
+   {
+    "tap": "🍔 Commander"
+   },
+   {
+    "bot": "Qu'est-ce qui vous ferait plaisir ? Choisissez un rayon — ou écrivez votre commande.",
+    "keys": [
+     [
+      "🍔 Burgers",
+      "🍕 Pizzas"
+     ],
+     [
+      "🌭 Hot-dogs",
+      "🥪 Sandwichs"
+     ],
+     [
+      "🍗 Croustillant et nuggets"
+     ],
+     [
+      "🍟 Accompagnements"
+     ],
+     [
+      "🥗 Salades",
+      "🍽 Menus et boxes"
+     ],
+     [
+      "🧒 Enfants",
+      "🥤 Boissons"
+     ],
+     [
+      "🍰 Desserts"
+     ],
+     [
+      "🔎 Aidez-moi à choisir"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🍕 Pizzas"
+   },
+   {
+    "bot": "🍕 Pizzas\n1. Pizza margherita — dès $8.00 🌱⭐\n2. Pizza pepperoni — dès $9.50 ⭐\n3. Pizza végétarienne — dès $9.00 🌱\n4. Pizza poulet barbecue — dès $10.00\n5. Pizza quatre fromages — dès $10.00 🌱\n🌶 épicé · 🌱 végétarien · ⭐ populaire · 🍽 en menu possible · ⛔ épuisé aujourd'hui",
+    "keys": [
+     [
+      "1. Pizza margherita"
+     ],
+     [
+      "2. Pizza pepperoni"
+     ],
+     [
+      "3. Pizza végétarienne"
+     ],
+     [
+      "4. Pizza poulet barbecue"
+     ],
+     [
+      "5. Pizza quatre fromages"
+     ],
+     [
+      "📋 La carte",
+      "🧾 Ma commande"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "1. Pizza margherita"
+   },
+   {
+    "photo": "assets/sn-pizza.svg",
+    "caption": "Pizza margherita — dès $8.00\nSauce tomate, mozzarella, basilic.\n🌱 Végétarien\n⚠️ Contient : gluten, lait\n\n1/3 — Taille (choisissez-en un)\n1 × $8.00 = $8.00",
+    "keys": [
+     [
+      "Petite (S)"
+     ],
+     [
+      "Moyenne (M) +$3.00"
+     ],
+     [
+      "Grande (L) +$6.00"
+     ],
+     [
+      "⬅️ 🍕 Pizzas",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Grande (L) +$6.00"
+   },
+   {
+    "bot": "2/3 — Pâte (choisissez-en un)\n✓ Grande (L)\n1 × $14.00 = $14.00",
+    "keys": [
+     [
+      "Pâte classique",
+      "Pâte fine"
+     ],
+     [
+      "⬅️ Retour",
+      "⬅️ 🍕 Pizzas"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Pâte fine"
+   },
+   {
+    "bot": "3/3 — Garnitures en plus (autant que vous voulez — touchez à nouveau pour retirer)\n✓ Grande (L) · Pâte fine\n1 × $14.00 = $14.00",
+    "keys": [
+     [
+      "✅ Ajouter · $14.00"
+     ],
+     [
+      "Fromage en plus +$1.50"
+     ],
+     [
+      "Champignons +$1.00"
+     ],
+     [
+      "Olives +$1.00",
+      "Poivrons +$1.00"
+     ],
+     [
+      "Maïs +$1.00",
+      "Jalapeños +$1.00"
+     ],
+     [
+      "Pepperoni bœuf +$2.00"
+     ],
+     [
+      "➡️ Suivant",
+      "⬅️ Retour"
+     ],
+     [
+      "⬅️ 🍕 Pizzas",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Olives +$1.00"
+   },
+   {
+    "bot": "3/3 — Garnitures en plus (autant que vous voulez — touchez à nouveau pour retirer)\n✓ Grande (L) · Pâte fine · Olives\n1 × $15.00 = $15.00",
+    "keys": [
+     [
+      "✅ Ajouter · $15.00"
+     ],
+     [
+      "Fromage en plus +$1.50"
+     ],
+     [
+      "Champignons +$1.00"
+     ],
+     [
+      "✓ Olives +$1.00",
+      "Poivrons +$1.00"
+     ],
+     [
+      "Maïs +$1.00",
+      "Jalapeños +$1.00"
+     ],
+     [
+      "Pepperoni bœuf +$2.00"
+     ],
+     [
+      "➡️ Suivant",
+      "⬅️ Retour"
+     ],
+     [
+      "⬅️ 🍕 Pizzas",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Ajouter · $15.00"
+   },
+   {
+    "bot": "✅ Ajouté : 1 × Pizza margherita (Grande (L) · Pâte fine · Olives) — $15.00\n🧾 Panier pour l'instant : $15.00",
+    "keys": [
+     [
+      "✏️ Pizza margherita"
      ],
      [
       "✅ Envoyer la commande"
      ],
      [
       "🧾 Ma commande",
-      "📋 La carte"
+      "⬅️ 🍕 Pizzas"
      ],
      [
+      "📋 La carte",
       "🏠 Menu"
      ]
     ]
@@ -4870,7 +5087,7 @@ window.RECORDED = {
     "tap": "💳 Carte"
    },
    {
-    "bot": "🧾 Votre commande\n1. 1 × Cheeseburger — $7.00\n2. 1 × Cheeseburger — $7.00\n     Sans oignons\n──────────\n🔥 Mardi : le 2e burger à moitié prix : −$3.50\nRepas : $10.50\nTotal : $10.50\n\n⏱ Pour 20:00\n🛍 À emporter au restaurant — prêt en 15–20 min\n👤 Claire · 📞 +96170000000\n💳 Carte à la livraison ou au comptoir\n\nOn l'envoie en cuisine ?",
+    "bot": "🧾 Votre commande\n1. 1 × Pizza margherita — $15.00\n     Grande (L) · Pâte fine · Olives\n──────────\nRepas : $15.00\nTotal : $15.00\n\n⏱ Pour 20:00\n🛍 À emporter au restaurant — prêt en 15–20 min\n👤 Claire · 📞 +96170000000\n💳 Carte à la livraison ou au comptoir\n\nOn l'envoie en cuisine ?",
     "keys": [
      [
       "✅ Oui, envoyez",
@@ -4913,7 +5130,7 @@ window.RECORDED = {
     ]
    },
    {
-    "alert": "🧾 طلب جديد S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n\n🔥 عرض: −$3.50\nالأكل $10.50 · التوصيل $0.00 · المجموع $10.50\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "alert": "🧾 طلب جديد S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × بيتزا مارغريتا\n   ▸ كبيرة (L)\n   ▸ عجينة رقيقة\n   ▸ زيتون\n\nالأكل $15.00 · التوصيل $0.00 · المجموع $15.00\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
     "keys": [
      [
       "✅ قبول للساعة 20:00"
@@ -4927,7 +5144,7 @@ window.RECORDED = {
     "teamTap": "✅ قبول للساعة 20:00"
    },
    {
-    "teamBot": "✓ S8AK24: ✅ انقبل — حوالي الساعة 20:00 — انقال للزبون.\n\n🧾 الطلب S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n\n🔥 عرض: −$3.50\nالأكل $10.50 · التوصيل $0.00 · المجموع $10.50\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "teamBot": "✓ S8AK24: ✅ انقبل — حوالي الساعة 20:00 — انقال للزبون.\n\n🧾 الطلب S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × بيتزا مارغريتا\n   ▸ كبيرة (L)\n   ▸ عجينة رقيقة\n   ▸ زيتون\n\nالأكل $15.00 · التوصيل $0.00 · المجموع $15.00\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
     "keys": [
      [
       "👨‍🍳 عم يتحضّر",
@@ -4940,6 +5157,35 @@ window.RECORDED = {
    },
    {
     "bot": "✅ La cuisine a accepté S8AK24 pour 20:00."
+   },
+   {
+    "teamTap": "👨‍🍳 عم يتحضّر"
+   },
+   {
+    "teamBot": "✓ S8AK24: 👨‍🍳 عم يتحضّر — حوالي الساعة 20:00 — انقال للزبون.\n\n🧾 الطلب S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × بيتزا مارغريتا\n   ▸ كبيرة (L)\n   ▸ عجينة رقيقة\n   ▸ زيتون\n\nالأكل $15.00 · التوصيل $0.00 · المجموع $15.00\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "keys": [
+     [
+      "🛍 جاهز للاستلام",
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "👨‍🍳 Votre commande S8AK24 est en préparation."
+   },
+   {
+    "teamTap": "🛍 جاهز للاستلام"
+   },
+   {
+    "teamBot": "✓ S8AK24: 🛍 جاهز للاستلام — انقال للزبون.\n\n🧾 الطلب S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × بيتزا مارغريتا\n   ▸ كبيرة (L)\n   ▸ عجينة رقيقة\n   ▸ زيتون\n\nالأكل $15.00 · التوصيل $0.00 · المجموع $15.00\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "keys": [
+     [
+      "✅ انستلم"
+     ]
+    ]
+   },
+   {
+    "bot": "🛍 S8AK24 est prête — venez la chercher. Questions : +961 1 000 000."
    }
   ]
  }
