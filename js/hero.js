@@ -1,12 +1,12 @@
 /* The portal, drawn on one canvas.
  *
  * A starfield drifting toward the centre, a clock ring whose hands show the visitor's own time,
- * an eight-pointed star turning slowly, an iris over the core that opens once on load, and five
+ * an eight-pointed star turning slowly, an iris over the core that opens once on load, and six
  * planets — one per bot — on tilted orbits that pass in front of and behind the dial. Clicking a
  * planet opens that bot's world further down the page.
  *
  * Behind it, when the browser has WebGL, js/portal-gl.js draws the light inside the portal: a
- * whirlpool in the five worlds' colours, and streaks while the page is scrolled fast ("warp").
+ * whirlpool in the six worlds' colours, and streaks while the page is scrolled fast ("warp").
  *
  * Nothing here is needed to use the page: every planet is also a tab in the worlds section.
  */
@@ -37,12 +37,12 @@
     id: bot.id,
     name: bot.short,
     rgb: hexToRgb(bot.hue),
-    rx: [1.2, 1.46, 1.04, 1.68, 1.32][i % 5],
-    flat: [0.36, 0.27, 0.5, 0.2, 0.42][i % 5],
-    tilt: [-0.34, 0.2, 0.66, -0.1, 0.38][i % 5],
-    speed: [0.15, -0.1, 0.19, -0.075, 0.12][i % 5],
-    phase: i * (TAU / 5) + 0.5,
-    size: [9, 8, 10, 7.5, 8.5][i % 5],
+    rx: [1.2, 1.46, 1.04, 1.68, 1.32, 1.56][i % 6],
+    flat: [0.36, 0.27, 0.5, 0.2, 0.42, 0.31][i % 6],
+    tilt: [-0.34, 0.2, 0.66, -0.1, 0.38, -0.52][i % 6],
+    speed: [0.15, -0.1, 0.19, -0.075, 0.12, -0.135][i % 6],
+    phase: i * (TAU / 6) + 0.5,
+    size: [9, 8, 10, 7.5, 8.5, 8][i % 6],
   }));
 
   let w = 0;

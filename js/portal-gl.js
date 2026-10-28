@@ -1,6 +1,6 @@
 /* The world beyond the portal, drawn by the graphics card.
  *
- * One fragment shader: a whirlpool of light inside the dial, woven from the five worlds' colours,
+ * One fragment shader: a whirlpool of light inside the dial, woven from the six worlds' colours,
  * drawn inward and turning; a halo around the rim; and, while the page is scrolled quickly, streaks
  * flying outward — the jump from the portal into the worlds. It sits behind js/hero.js's canvas,
  * which keeps the line work (the star, the clock, the iris, the planets) crisp on top.
@@ -30,6 +30,7 @@
     uniform vec3 uC2;
     uniform vec3 uC3;
     uniform vec3 uC4;
+    uniform vec3 uC5;
 
     const float TAU = 6.2831853;
 
@@ -59,14 +60,15 @@
       }
       return v;
     }
-    // The five worlds' colours around the circle, blended smoothly all the way round.
+    // The six worlds' colours around the circle, blended smoothly all the way round.
     vec3 worlds(float k) {
-      float w0 = pow(0.5 + 0.5 * cos(TAU * (k - 0.0)), 3.0);
-      float w1 = pow(0.5 + 0.5 * cos(TAU * (k - 0.2)), 3.0);
-      float w2 = pow(0.5 + 0.5 * cos(TAU * (k - 0.4)), 3.0);
-      float w3 = pow(0.5 + 0.5 * cos(TAU * (k - 0.6)), 3.0);
-      float w4 = pow(0.5 + 0.5 * cos(TAU * (k - 0.8)), 3.0);
-      return (uC0 * w0 + uC1 * w1 + uC2 * w2 + uC3 * w3 + uC4 * w4) / (w0 + w1 + w2 + w3 + w4);
+      float w0 = pow(0.5 + 0.5 * cos(TAU * (k - 0.0 / 6.0)), 4.0);
+      float w1 = pow(0.5 + 0.5 * cos(TAU * (k - 1.0 / 6.0)), 4.0);
+      float w2 = pow(0.5 + 0.5 * cos(TAU * (k - 2.0 / 6.0)), 4.0);
+      float w3 = pow(0.5 + 0.5 * cos(TAU * (k - 3.0 / 6.0)), 4.0);
+      float w4 = pow(0.5 + 0.5 * cos(TAU * (k - 4.0 / 6.0)), 4.0);
+      float w5 = pow(0.5 + 0.5 * cos(TAU * (k - 5.0 / 6.0)), 4.0);
+      return (uC0 * w0 + uC1 * w1 + uC2 * w2 + uC3 * w3 + uC4 * w4 + uC5 * w5) / (w0 + w1 + w2 + w3 + w4 + w5);
     }
 
     void main() {
@@ -162,10 +164,10 @@
       const aPos = gl.getAttribLocation(program, "aPos");
       gl.enableVertexAttribArray(aPos);
       gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
-      for (const name of ["uRes", "uCenter", "uR", "uTime", "uOpen", "uWarp", "uPointer", "uC0", "uC1", "uC2", "uC3", "uC4"]) {
+      for (const name of ["uRes", "uCenter", "uR", "uTime", "uOpen", "uWarp", "uPointer", "uC0", "uC1", "uC2", "uC3", "uC4", "uC5"]) {
         u[name] = gl.getUniformLocation(program, name);
       }
-      [0, 1, 2, 3, 4].map((i) => rgb(colours[i] || "#22c3b0")).forEach((c, i) => gl.uniform3fv(u[`uC${i}`], c));
+      [0, 1, 2, 3, 4, 5].map((i) => rgb(colours[i] || "#22c3b0")).forEach((c, i) => gl.uniform3fv(u[`uC${i}`], c));
       if (size) gl.uniform2f(u.uRes, size[0], size[1]);
       state = "ready";
     }

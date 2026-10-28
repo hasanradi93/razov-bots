@@ -3811,5 +3811,1136 @@ window.RECORDED = {
     ]
    }
   ]
+ },
+ "snack": {
+  "en": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "أهلا وسهلا بـدو سناك 🍔\nبرغر، بيتزا، هوت دوغ وساندويشات — اطلب من هون، توصيل أو استلام.\nاختار من تحت، أو اكتب طلبك متل ما بتحكي: «٢ تشيز برغر واحد بلا بصل».\n\nWelcome to Doe Snack 🍔\nBurgers, pizza, hot dogs and sandwiches — order here, for delivery or pickup.\nChoose below, or just type your order: \"2 cheeseburgers, one without onions\".",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🍔 اطلب",
+      "🔥 العروض"
+     ],
+     [
+      "📦 طلباتي",
+      "❓ أسئلة"
+     ],
+     [
+      "📞 اتصلوا فيي",
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇬🇧 English"
+   },
+   {
+    "bot": "✅ Done — we'll carry on in English.\nHow can I help? Choose:",
+    "keys": [
+     [
+      "🍔 Order",
+      "🔥 Offers"
+     ],
+     [
+      "📦 My orders",
+      "❓ Questions"
+     ],
+     [
+      "📞 Call me",
+      "🌐 Language"
+     ],
+     [
+      "❓ Help"
+     ]
+    ]
+   },
+   {
+    "tap": "🍔 Order"
+   },
+   {
+    "bot": "What would you like? Choose a section — or type your order.",
+    "keys": [
+     [
+      "🍔 Burgers",
+      "🍕 Pizza"
+     ],
+     [
+      "🌭 Hot dogs",
+      "🥪 Sandwiches"
+     ],
+     [
+      "🍗 Crispy & nuggets"
+     ],
+     [
+      "🍟 Sides",
+      "🥗 Salads"
+     ],
+     [
+      "🍽 Meals & boxes",
+      "🧒 Kids"
+     ],
+     [
+      "🥤 Drinks",
+      "🍰 Desserts"
+     ],
+     [
+      "🔎 Help me choose",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🍔 Burgers"
+   },
+   {
+    "bot": "🍔 Burgers\n1. Classic burger — $6.00 ⭐🍽\n2. Cheeseburger — $7.00 ⭐🍽\n3. Double burger — $9.50 🍽\n4. Chicken burger — $7.00 🍽\n5. Mushroom & Swiss — $8.50 🍽\n6. Spicy burger — $7.50 🌶🍽\n7. Veggie burger — $6.50 🌱🍽\n🌶 spicy · 🌱 vegetarian · ⭐ popular · 🍽 can be a meal · ⛔ sold out today",
+    "keys": [
+     [
+      "1. Classic burger"
+     ],
+     [
+      "2. Cheeseburger",
+      "3. Double burger"
+     ],
+     [
+      "4. Chicken burger"
+     ],
+     [
+      "5. Mushroom & Swiss"
+     ],
+     [
+      "6. Spicy burger",
+      "7. Veggie burger"
+     ],
+     [
+      "📋 Food menu",
+      "🧾 My order"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "2. Cheeseburger"
+   },
+   {
+    "photo": "assets/sn-burger.svg",
+    "caption": "Cheeseburger — $7.00\nBeef patty, cheddar, lettuce, tomato, onions, pickles, burger sauce.\n⚠️ Contains: gluten, sesame, dairy, egg, mustard\n🍽 As a meal: +$3.50 (fries + a drink of your choice)\n\n1/3 — Sauce (choose one, or ➡️ to skip)\n1 × $7.00 = $7.00",
+    "keys": [
+     [
+      "✅ Add · $7.00",
+      "Garlic (toum)"
+     ],
+     [
+      "Ketchup",
+      "Mayo"
+     ],
+     [
+      "BBQ",
+      "Spicy sauce"
+     ],
+     [
+      "➡️ Next"
+     ],
+     [
+      "🍽 Make it a meal +$3.50"
+     ],
+     [
+      "⬅️ 🍔 Burgers",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "BBQ"
+   },
+   {
+    "bot": "2/3 — Extras (any — tap again to take one off)\n✓ BBQ\n1 × $7.00 = $7.00",
+    "keys": [
+     [
+      "✅ Add · $7.00"
+     ],
+     [
+      "Extra cheese +$1.00"
+     ],
+     [
+      "Extra patty +$3.00"
+     ],
+     [
+      "Egg +$1.00",
+      "Jalapeños +$0.50"
+     ],
+     [
+      "Mushrooms +$1.00",
+      "➡️ Next"
+     ],
+     [
+      "🍽 Make it a meal +$3.50"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Extra cheese +$1.00"
+   },
+   {
+    "bot": "2/3 — Extras (any — tap again to take one off)\n✓ BBQ · Extra cheese\n1 × $8.00 = $8.00",
+    "keys": [
+     [
+      "✅ Add · $8.00"
+     ],
+     [
+      "✓ Extra cheese +$1.00"
+     ],
+     [
+      "Extra patty +$3.00"
+     ],
+     [
+      "Egg +$1.00",
+      "Jalapeños +$0.50"
+     ],
+     [
+      "Mushrooms +$1.00",
+      "➡️ Next"
+     ],
+     [
+      "🍽 Make it a meal +$3.50"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "➡️ Next"
+   },
+   {
+    "bot": "3/3 — Leave out (tap what to leave out)\n✓ BBQ · Extra cheese\n1 × $8.00 = $8.00",
+    "keys": [
+     [
+      "✅ Add · $8.00",
+      "No onions"
+     ],
+     [
+      "No pickles",
+      "No tomato"
+     ],
+     [
+      "No lettuce",
+      "No sauce"
+     ],
+     [
+      "➡️ Next"
+     ],
+     [
+      "🍽 Make it a meal +$3.50"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "No onions"
+   },
+   {
+    "bot": "3/3 — Leave out (tap what to leave out)\n✓ BBQ · Extra cheese · No onions\n1 × $8.00 = $8.00",
+    "keys": [
+     [
+      "✅ Add · $8.00",
+      "✓ No onions"
+     ],
+     [
+      "No pickles",
+      "No tomato"
+     ],
+     [
+      "No lettuce",
+      "No sauce"
+     ],
+     [
+      "➡️ Next"
+     ],
+     [
+      "🍽 Make it a meal +$3.50"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🍽 Make it a meal +$3.50"
+   },
+   {
+    "bot": "4/4 — Meal drink (choose one)\n✓ BBQ · Extra cheese · No onions · 🍽 meal (fries + …)\n1 × $11.50 = $11.50",
+    "keys": [
+     [
+      "Cola",
+      "Orange soda"
+     ],
+     [
+      "Lemon-lime",
+      "Water"
+     ],
+     [
+      "Ayran +$0.50",
+      "➡️ Next"
+     ],
+     [
+      "✖ Not a meal",
+      "⬅️ Back"
+     ],
+     [
+      "⬅️ 🍔 Burgers",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "Cola"
+   },
+   {
+    "bot": "Your Cheeseburger, ready to add:\n✓ BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)\n1 × $11.50 = $11.50",
+    "keys": [
+     [
+      "✅ Add · $11.50",
+      "✖ Not a meal"
+     ],
+     [
+      "➕ 1"
+     ],
+     [
+      "📝 Note for the kitchen"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "➕ 1"
+   },
+   {
+    "bot": "Your Cheeseburger, ready to add:\n✓ BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)\n2 × $11.50 = $23.00",
+    "keys": [
+     [
+      "✅ Add · $23.00",
+      "✖ Not a meal"
+     ],
+     [
+      "➖ 1",
+      "➕ 1"
+     ],
+     [
+      "📝 Note for the kitchen"
+     ],
+     [
+      "⬅️ Back",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Add · $23.00"
+   },
+   {
+    "bot": "✅ Added: 2 × Cheeseburger (BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)) — $23.00\n🧾 Basket so far: $19.00",
+    "keys": [
+     [
+      "✏️ Cheeseburger",
+      "✅ Send the order"
+     ],
+     [
+      "🧾 My order",
+      "⬅️ 🍔 Burgers"
+     ],
+     [
+      "📋 Food menu",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Send the order"
+   },
+   {
+    "bot": "When would you like it?",
+    "keys": [
+     [
+      "⚡ As soon as possible"
+     ],
+     [
+      "🕒 19:30",
+      "🕒 19:45"
+     ],
+     [
+      "🕒 20:00",
+      "🕒 20:15"
+     ],
+     [
+      "🕒 20:30",
+      "🕒 20:45"
+     ],
+     [
+      "🕒 21:00",
+      "🕒 21:15"
+     ],
+     [
+      "⏩ Later times",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "⚡ As soon as possible"
+   },
+   {
+    "bot": "🛵 Delivery, or 🛍 pickup at the restaurant (ready in 15–20 min)?",
+    "keys": [
+     [
+      "🛵 Delivery",
+      "🛍 Pickup"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🛵 Delivery"
+   },
+   {
+    "bot": "Which area? We deliver to:\n• Hamra: delivery $1.00 · minimum $10.00 · 25–35 min\n• Ras Beirut: delivery $1.50 · minimum $10.00 · 30–40 min\n• Verdun: delivery $2.00 · minimum $10.00 · 35–45 min\n• Achrafieh: delivery $3.00 · minimum $10.00 · 40–55 min\n• Mar Mikhael: delivery $3.00 · minimum $10.00 · 40–55 min",
+    "keys": [
+     [
+      "🗺 Hamra",
+      "🗺 Ras Beirut"
+     ],
+     [
+      "🗺 Verdun",
+      "🗺 Achrafieh"
+     ],
+     [
+      "🗺 Mar Mikhael",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🗺 Hamra"
+   },
+   {
+    "bot": "📍 Your address in Hamra: building, floor and a landmark (\"Doe building, 3rd floor, next to the pharmacy\") — or send your location pin (📎 → Location).",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "Doe building, 3rd floor, next to the pharmacy"
+   },
+   {
+    "bot": "Your name, for the order?",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "Karim"
+   },
+   {
+    "bot": "Your phone number, so the driver or the kitchen can reach you — tap the button, or type it:",
+    "keys": [
+     [
+      "📱 Share my number"
+     ]
+    ]
+   },
+   {
+    "tap": "📱 Share my number"
+   },
+   {
+    "bot": "How will you pay? (At the door or at the counter — never in the chat.)",
+    "keys": [
+     [
+      "💵 Cash",
+      "💳 Card",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "💵 Cash"
+   },
+   {
+    "bot": "Your total is $20.00. Need change? You'll pay with:",
+    "keys": [
+     [
+      "👌 No change needed"
+     ],
+     [
+      "💵 $50",
+      "💵 $100",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "👌 No change needed"
+   },
+   {
+    "bot": "🧾 Your order\n1. 2 × Cheeseburger — $23.00\n     BBQ · Extra cheese · No onions · 🍽 meal (fries + Cola)\n──────────\n🔥 Tuesday: second burger half price: −$4.00\nFood: $19.00\nDelivery: $1.00\nTotal: $20.00\n\n⏱ As soon as possible\n🛵 Delivery to Hamra — Doe building, 3rd floor, next to the pharmacy (25–35 min)\n👤 Karim · 📞 +96170000000\n💵 Cash, no change needed\n\nSend it to the kitchen?",
+    "keys": [
+     [
+      "✅ Yes, send it",
+      "no"
+     ],
+     [
+      "✏️ When"
+     ],
+     [
+      "✏️ Delivery / pickup"
+     ],
+     [
+      "✏️ Address",
+      "✏️ Name"
+     ],
+     [
+      "✏️ Phone",
+      "✏️ Payment"
+     ],
+     [
+      "✏️ Change the order"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Yes, send it"
+   },
+   {
+    "bot": "✅ Order 4J57S8 is with the kitchen (as soon as possible). You'll get a message here as soon as they accept it, with the time.",
+    "keys": [
+     [
+      "📦 My orders",
+      "📋 Food menu"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "alert": "🧾 طلب جديد 4J57S8\n🛵 توصيل\n⚡ بأسرع وقت\n\n1. 2 × تشيز برغر\n   ▸ باربكيو\n   ▸ جبنة زيادة\n   ▸ بلا بصل\n   ▸ 🍽 وجبة (بطاطا + كولا)\n\n🔥 عرض: −$4.00\nالأكل $19.00 · التوصيل $1.00 · المجموع $20.00\n📍 الحمرا — Doe building, 3rd floor, next to the pharmacy\n👤 Karim · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "✅ 15 د",
+      "✅ 30 د",
+      "✅ 45 د"
+     ],
+     [
+      "✅ 60 د",
+      "❌ رفض"
+     ]
+    ]
+   },
+   {
+    "teamTap": "✅ 30 د"
+   },
+   {
+    "teamBot": "✓ 4J57S8: ✅ انقبل — حوالي الساعة 19:30 — انقال للزبون.\n\n🧾 الطلب 4J57S8\n🛵 توصيل\n⚡ بأسرع وقت\n\n1. 2 × تشيز برغر\n   ▸ باربكيو\n   ▸ جبنة زيادة\n   ▸ بلا بصل\n   ▸ 🍽 وجبة (بطاطا + كولا)\n\n🔥 عرض: −$4.00\nالأكل $19.00 · التوصيل $1.00 · المجموع $20.00\n📍 الحمرا — Doe building, 3rd floor, next to the pharmacy\n👤 Karim · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "👨‍🍳 عم يتحضّر",
+      "🛵 طلع للتوصيل"
+     ],
+     [
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "✅ The kitchen accepted 4J57S8 — it should reach you in about 30 min (around 19:30)."
+   },
+   {
+    "teamTap": "👨‍🍳 عم يتحضّر"
+   },
+   {
+    "teamBot": "✓ 4J57S8: 👨‍🍳 عم يتحضّر — حوالي الساعة 19:30 — انقال للزبون.\n\n🧾 الطلب 4J57S8\n🛵 توصيل\n⚡ بأسرع وقت\n\n1. 2 × تشيز برغر\n   ▸ باربكيو\n   ▸ جبنة زيادة\n   ▸ بلا بصل\n   ▸ 🍽 وجبة (بطاطا + كولا)\n\n🔥 عرض: −$4.00\nالأكل $19.00 · التوصيل $1.00 · المجموع $20.00\n📍 الحمرا — Doe building, 3rd floor, next to the pharmacy\n👤 Karim · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "🛵 طلع للتوصيل",
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "👨‍🍳 Your order 4J57S8 is being prepared."
+   },
+   {
+    "teamTap": "🛵 طلع للتوصيل"
+   },
+   {
+    "teamBot": "✓ 4J57S8: 🛵 عالطريق — حوالي الساعة 19:30 — انقال للزبون.\n\n🧾 الطلب 4J57S8\n🛵 توصيل\n⚡ بأسرع وقت\n\n1. 2 × تشيز برغر\n   ▸ باربكيو\n   ▸ جبنة زيادة\n   ▸ بلا بصل\n   ▸ 🍽 وجبة (بطاطا + كولا)\n\n🔥 عرض: −$4.00\nالأكل $19.00 · التوصيل $1.00 · المجموع $20.00\n📍 الحمرا — Doe building, 3rd floor, next to the pharmacy\n👤 Karim · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "✅ وصل"
+     ]
+    ]
+   },
+   {
+    "bot": "🛵 4J57S8 is on its way!"
+   }
+  ],
+  "ar": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "أهلا وسهلا بـدو سناك 🍔\nبرغر، بيتزا، هوت دوغ وساندويشات — اطلب من هون، توصيل أو استلام.\nاختار من تحت، أو اكتب طلبك متل ما بتحكي: «٢ تشيز برغر واحد بلا بصل».\n\nWelcome to Doe Snack 🍔\nBurgers, pizza, hot dogs and sandwiches — order here, for delivery or pickup.\nChoose below, or just type your order: \"2 cheeseburgers, one without onions\".",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🍔 اطلب",
+      "🔥 العروض"
+     ],
+     [
+      "📦 طلباتي",
+      "❓ أسئلة"
+     ],
+     [
+      "📞 اتصلوا فيي",
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "me": "بدي ٢ تشيز برغر واحد بلا بصل وبطاطا كبيرة"
+   },
+   {
+    "bot": "✅ انضاف: 1 × تشيز برغر — $7.00\n✅ انضاف: 1 × تشيز برغر (بلا بصل) — $7.00\n✅ انضاف: 1 × بطاطا مقلية (كبير) — $3.50\n🧾 السلّة لهلق: $17.50",
+    "keys": [
+     [
+      "✏️ غيّر آخر واحد",
+      "✅ ابعت الطلبية"
+     ],
+     [
+      "🧾 طلبيتي",
+      "📋 المنيو"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ ابعت الطلبية"
+   },
+   {
+    "bot": "مسكّرين هلق — منفتح اليوم الساعة 12:00.\nاطلب هلق لبعدين — اختار الوقت:",
+    "keys": [
+     [
+      "🕒 12:15",
+      "🕒 12:30"
+     ],
+     [
+      "🕒 12:45",
+      "🕒 13:00"
+     ],
+     [
+      "🕒 13:15",
+      "🕒 13:30"
+     ],
+     [
+      "🕒 13:45",
+      "🕒 14:00"
+     ],
+     [
+      "⏩ أوقات بعدين",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🕒 12:30"
+   },
+   {
+    "bot": "🛵 توصيل، أو 🛍 بتستلمو من المطعم (بيجهز بـ ١٥–٢٠ دقيقة)؟",
+    "keys": [
+     [
+      "🛵 توصيل",
+      "🛍 استلام"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🛍 استلام"
+   },
+   {
+    "bot": "شو اسمك للطلب؟",
+    "keys": [
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "me": "رامي"
+   },
+   {
+    "bot": "رقم تلفونك، ليقدر الديليفري أو المطبخ يحكيك — دوس الزر، أو اكتبو:",
+    "keys": [
+     [
+      "📱 ابعت رقمي"
+     ]
+    ]
+   },
+   {
+    "tap": "📱 ابعت رقمي"
+   },
+   {
+    "bot": "كيف بدك تدفع؟ (عالباب أو بالمطعم — أبداً مش بالشات.)",
+    "keys": [
+     [
+      "💵 كاش",
+      "💳 بطاقة"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "💵 كاش"
+   },
+   {
+    "bot": "المجموع $17.50. بدك فراطة؟ رح تدفع بـ:",
+    "keys": [
+     [
+      "👌 ما بدي فراطة",
+      "💵 $20"
+     ],
+     [
+      "💵 $50",
+      "💵 $100"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "👌 ما بدي فراطة"
+   },
+   {
+    "bot": "🧾 طلبك\n1. 1 × تشيز برغر — $7.00\n2. 1 × تشيز برغر — $7.00\n     بلا بصل\n3. 1 × بطاطا مقلية — $3.50\n     كبير\n──────────\nالأكل: $17.50\nالمجموع: $17.50\n\n⏱ للساعة 12:30\n🛍 استلام من المطعم — بيجهز بـ ١٥–٢٠ دقيقة\n👤 رامي · 📞 +96170000000\n💵 كاش، ما بدك فراطة\n\nنبعتو عالمطبخ؟",
+    "keys": [
+     [
+      "✅ إيه، ابعتها",
+      "لا"
+     ],
+     [
+      "✏️ الوقت"
+     ],
+     [
+      "✏️ توصيل / استلام"
+     ],
+     [
+      "✏️ الاسم",
+      "✏️ الرقم"
+     ],
+     [
+      "✏️ الدفع",
+      "✏️ عدّل الطلبية"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ إيه، ابعتها"
+   },
+   {
+    "bot": "✅ الطلب YUZ6TN راح عالمطبخ (للساعة 12:30). رح توصلك رسالة هون أول ما يقبلوه، مع الوقت.",
+    "keys": [
+     [
+      "📦 طلباتي",
+      "📋 المنيو"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "alert": "🧾 طلب جديد YUZ6TN\n🛍 استلام من المطعم\n⏱ للساعة 12:30\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n3. 1 × بطاطا مقلية\n   ▸ كبير\n\nالأكل $17.50 · التوصيل $0.00 · المجموع $17.50\n👤 رامي · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "✅ قبول للساعة 12:30"
+     ],
+     [
+      "❌ رفض"
+     ]
+    ]
+   },
+   {
+    "teamTap": "✅ قبول للساعة 12:30"
+   },
+   {
+    "teamBot": "✓ YUZ6TN: ✅ انقبل — حوالي الساعة 12:30 — انقال للزبون.\n\n🧾 الطلب YUZ6TN\n🛍 استلام من المطعم\n⏱ للساعة 12:30\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n3. 1 × بطاطا مقلية\n   ▸ كبير\n\nالأكل $17.50 · التوصيل $0.00 · المجموع $17.50\n👤 رامي · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "👨‍🍳 عم يتحضّر",
+      "🛍 جاهز للاستلام"
+     ],
+     [
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "✅ المطبخ قبل YUZ6TN للساعة 12:30."
+   },
+   {
+    "teamTap": "👨‍🍳 عم يتحضّر"
+   },
+   {
+    "teamBot": "✓ YUZ6TN: 👨‍🍳 عم يتحضّر — حوالي الساعة 12:30 — انقال للزبون.\n\n🧾 الطلب YUZ6TN\n🛍 استلام من المطعم\n⏱ للساعة 12:30\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n3. 1 × بطاطا مقلية\n   ▸ كبير\n\nالأكل $17.50 · التوصيل $0.00 · المجموع $17.50\n👤 رامي · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "🛍 جاهز للاستلام",
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "👨‍🍳 طلبك YUZ6TN عم يتحضّر."
+   },
+   {
+    "teamTap": "🛍 جاهز للاستلام"
+   },
+   {
+    "teamBot": "✓ YUZ6TN: 🛍 جاهز للاستلام — انقال للزبون.\n\n🧾 الطلب YUZ6TN\n🛍 استلام من المطعم\n⏱ للساعة 12:30\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n3. 1 × بطاطا مقلية\n   ▸ كبير\n\nالأكل $17.50 · التوصيل $0.00 · المجموع $17.50\n👤 رامي · 📞 +96170000000 (مأكّد من تلغرام)\n💵 كاش، بلا فراطة",
+    "keys": [
+     [
+      "✅ انستلم"
+     ]
+    ]
+   },
+   {
+    "bot": "🛍 YUZ6TN جاهز — تفضّل استلمو. لأي سؤال: +961 1 000 000."
+   }
+  ],
+  "fr": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "أهلا وسهلا بـدو سناك 🍔\nبرغر، بيتزا، هوت دوغ وساندويشات — اطلب من هون، توصيل أو استلام.\nاختار من تحت، أو اكتب طلبك متل ما بتحكي: «٢ تشيز برغر واحد بلا بصل».\n\nWelcome to Doe Snack 🍔\nBurgers, pizza, hot dogs and sandwiches — order here, for delivery or pickup.\nChoose below, or just type your order: \"2 cheeseburgers, one without onions\".",
+    "keys": [
+     [
+      "🌐 اللغة · Language · Langue"
+     ],
+     [
+      "🍔 اطلب",
+      "🔥 العروض"
+     ],
+     [
+      "📦 طلباتي",
+      "❓ أسئلة"
+     ],
+     [
+      "📞 اتصلوا فيي",
+      "❓ مساعدة"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة · Language · Langue"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose your language · Choisissez la langue",
+    "keys": [
+     [
+      "🇱🇧 عربي",
+      "🇸🇦 عربي خليجي"
+     ],
+     [
+      "🔤 Arabizi",
+      "🇬🇧 English"
+     ],
+     [
+      "🇫🇷 Français",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "🇫🇷 Français"
+   },
+   {
+    "bot": "✅ C'est fait — nous continuons en français.\nComment puis-je vous aider ? Choisissez :",
+    "keys": [
+     [
+      "🍔 Commander",
+      "🔥 Offres"
+     ],
+     [
+      "📦 Mes commandes",
+      "❓ Questions"
+     ],
+     [
+      "📞 Rappelez-moi",
+      "🌐 Langue"
+     ],
+     [
+      "❓ Aide"
+     ]
+    ]
+   },
+   {
+    "me": "2 cheeseburgers dont un sans oignons"
+   },
+   {
+    "bot": "✅ Ajouté : 1 × Cheeseburger — $7.00\n✅ Ajouté : 1 × Cheeseburger (Sans oignons) — $7.00\n🧾 Panier pour l'instant : $10.50",
+    "keys": [
+     [
+      "✏️ Modifier le dernier"
+     ],
+     [
+      "✅ Envoyer la commande"
+     ],
+     [
+      "🧾 Ma commande",
+      "📋 La carte"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Envoyer la commande"
+   },
+   {
+    "bot": "Pour quand le voulez-vous ?",
+    "keys": [
+     [
+      "⚡ Dès que possible"
+     ],
+     [
+      "🕒 19:30",
+      "🕒 19:45"
+     ],
+     [
+      "🕒 20:00",
+      "🕒 20:15"
+     ],
+     [
+      "🕒 20:30",
+      "🕒 20:45"
+     ],
+     [
+      "🕒 21:00",
+      "🕒 21:15"
+     ],
+     [
+      "⏩ Plus tard",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🕒 20:00"
+   },
+   {
+    "bot": "🛵 Livraison, ou 🛍 à emporter au restaurant (prêt en 15–20 min) ?",
+    "keys": [
+     [
+      "🛵 Livraison",
+      "🛍 À emporter"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🛍 À emporter"
+   },
+   {
+    "bot": "Votre nom, pour la commande ?",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "Claire"
+   },
+   {
+    "bot": "Votre numéro, pour que le livreur ou la cuisine puisse vous joindre — touchez le bouton, ou écrivez-le :",
+    "keys": [
+     [
+      "📱 Partager mon numéro"
+     ]
+    ]
+   },
+   {
+    "tap": "📱 Partager mon numéro"
+   },
+   {
+    "bot": "Comment payerez-vous ? (À la porte ou au comptoir — jamais dans la conversation.)",
+    "keys": [
+     [
+      "💵 Espèces",
+      "💳 Carte"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "💳 Carte"
+   },
+   {
+    "bot": "🧾 Votre commande\n1. 1 × Cheeseburger — $7.00\n2. 1 × Cheeseburger — $7.00\n     Sans oignons\n──────────\n🔥 Mardi : le 2e burger à moitié prix : −$3.50\nRepas : $10.50\nTotal : $10.50\n\n⏱ Pour 20:00\n🛍 À emporter au restaurant — prêt en 15–20 min\n👤 Claire · 📞 +96170000000\n💳 Carte à la livraison ou au comptoir\n\nOn l'envoie en cuisine ?",
+    "keys": [
+     [
+      "✅ Oui, envoyez",
+      "non"
+     ],
+     [
+      "✏️ Quand"
+     ],
+     [
+      "✏️ Livraison / à emporter"
+     ],
+     [
+      "✏️ Nom",
+      "✏️ Téléphone"
+     ],
+     [
+      "✏️ Paiement"
+     ],
+     [
+      "✏️ Modifier la commande"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Oui, envoyez"
+   },
+   {
+    "bot": "✅ La commande S8AK24 est en cuisine (pour 20:00). Vous recevrez un message ici dès qu'elle est acceptée, avec l'heure.",
+    "keys": [
+     [
+      "📦 Mes commandes",
+      "📋 La carte"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "alert": "🧾 طلب جديد S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n\n🔥 عرض: −$3.50\nالأكل $10.50 · التوصيل $0.00 · المجموع $10.50\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "keys": [
+     [
+      "✅ قبول للساعة 20:00"
+     ],
+     [
+      "❌ رفض"
+     ]
+    ]
+   },
+   {
+    "teamTap": "✅ قبول للساعة 20:00"
+   },
+   {
+    "teamBot": "✓ S8AK24: ✅ انقبل — حوالي الساعة 20:00 — انقال للزبون.\n\n🧾 الطلب S8AK24\n🛍 استلام من المطعم\n⏱ للساعة 20:00\n\n1. 1 × تشيز برغر\n2. 1 × تشيز برغر\n   ▸ بلا بصل\n\n🔥 عرض: −$3.50\nالأكل $10.50 · التوصيل $0.00 · المجموع $10.50\n👤 Claire · 📞 +96170000000 (مأكّد من تلغرام)\n💳 بطاقة",
+    "keys": [
+     [
+      "👨‍🍳 عم يتحضّر",
+      "🛍 جاهز للاستلام"
+     ],
+     [
+      "❌ إلغاء"
+     ]
+    ]
+   },
+   {
+    "bot": "✅ La cuisine a accepté S8AK24 pour 20:00."
+   }
+  ]
  }
 };

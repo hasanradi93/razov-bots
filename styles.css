@@ -1,7 +1,7 @@
-/* Razov Bots — one page, five worlds.
+/* Razov Bots — one page, six worlds.
  *
  * The idea: an eight-pointed Levantine star that is also a clock face (Mawaeed means
- * "appointments"), opening like a portal onto five worlds — one per bot, each in its own colour.
+ * "appointments"), opening like a portal onto six worlds — one per bot, each in its own colour.
  * The night is teal, not black; each world brings its own hue, set as --world on the section.
  */
 
@@ -72,6 +72,7 @@
   --medical: #a3b6ff;
   --wholesale: #ffc857;
   --electronics: #9be86a;
+  --snack: #ff7b54;
 
   --display: "Anybody", "Arial Narrow", system-ui, sans-serif;
   --text: "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -403,13 +404,13 @@ strong { font-weight: 500; }
 .how-head,
 .plans-head { max-width: var(--max); margin: 0 auto; }
 
-/* The orbit: five planets on one arc. Each is a tab. */
+/* The orbit: six planets on one arc. Each is a tab. */
 .orbit {
   position: relative;
   max-width: 980px;
   margin: clamp(36px, 6vh, 64px) auto 0;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 8px;
   padding-top: 36px;
 }
@@ -444,8 +445,8 @@ strong { font-weight: 500; }
   border-radius: var(--radius-m);
   -webkit-tap-highlight-color: transparent;
 }
-.planet:nth-child(1), .planet:nth-child(5) { transform: translateY(30px); }
-.planet:nth-child(2), .planet:nth-child(4) { transform: translateY(9px); }
+.planet:nth-child(1), .planet:nth-child(6) { transform: translateY(32px); }
+.planet:nth-child(2), .planet:nth-child(5) { transform: translateY(10px); }
 
 .planet-body {
   position: relative;
@@ -529,17 +530,10 @@ strong { font-weight: 500; }
   .planet:nth-child(n) { transform: none; }
   .planet-ring { inset: -8px; }
   .planet-state { display: none; }
-  /* Five across a phone: every column may shrink, and a name never pushes the page wider. */
-  .orbit { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .planet-name { font-size: 0.6875rem; hyphens: auto; }
+  /* Six on a phone: two rows of three, each column free to shrink. */
+  .orbit { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; padding-inline: 8px; }
+  .planet-name { font-size: 0.75rem; hyphens: auto; }
   .planet[aria-selected="true"] .planet-name { font-variation-settings: "wdth" 100; }
-}
-@media (max-width: 400px) {
-  /* Room at the sides for the chosen planet's ring and moon. */
-  .orbit { padding-inline: 8px; }
-  .planet-body { width: 46px; }
-  .planet-ring { inset: -6px; }
-  .planet-name { font-size: 0.625rem; letter-spacing: -0.01em; }
 }
 
 /* The stage: every world's panel sits in one grid cell, so a new one can open over the old. */
@@ -1316,12 +1310,12 @@ strong { font-weight: 500; }
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics));
+  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack));
   transform-origin: left;
   transform: scaleX(var(--progress, 0));
 }
 .how-track[data-axis="y"] .how-fill {
-  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics));
+  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack));
   transform-origin: top;
   transform: scaleY(var(--progress, 0));
 }
