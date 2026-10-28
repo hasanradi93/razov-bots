@@ -3223,7 +3223,7 @@ window.RECORDED = {
       "➕ Samsung Galaxy Buds3 Pro · $229.00"
      ],
      [
-      "✏️ Samsung Galaxy A36 · 128 GB"
+      "✏️ Samsung Galaxy A36 · 128 GB (⚫ Black)"
      ],
      [
       "🧾 My order",
