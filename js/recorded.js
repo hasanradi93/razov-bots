@@ -4551,7 +4551,7 @@ window.RECORDED = {
     "me": "رامي"
    },
    {
-    "bot": "رقم تلفونك، ليقدر الديليفري أو المطبخ يحكيك — دوس الزر، أو اكتبو:",
+    "bot": "رقم تلفونك، ليقدر المطبخ يحكيك إذا لزم — دوس الزر، أو اكتبو:",
     "keys": [
      [
       "📱 ابعت رقمي"
@@ -5061,7 +5061,7 @@ window.RECORDED = {
     "me": "Claire"
    },
    {
-    "bot": "Votre numéro, pour que le livreur ou la cuisine puisse vous joindre — touchez le bouton, ou écrivez-le :",
+    "bot": "Votre numéro, pour que la cuisine puisse vous joindre au besoin — touchez le bouton, ou écrivez-le :",
     "keys": [
      [
       "📱 Partager mon numéro"
