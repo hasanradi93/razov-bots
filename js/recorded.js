@@ -2931,7 +2931,7 @@ window.RECORDED = {
      ],
      [
       "🔧 صيانة",
-      "❓ أسئلة"
+      "💬 أسئلة"
      ],
      [
       "📞 اتصلوا فيي",
@@ -2971,7 +2971,7 @@ window.RECORDED = {
      ],
      [
       "🔧 Repairs",
-      "❓ Questions"
+      "💬 Questions"
      ],
      [
       "📞 Call me",
@@ -3301,7 +3301,7 @@ window.RECORDED = {
     "tap": "📱 Share my number"
    },
    {
-    "bot": "Pick up from the shop (Hamra) — open Monday, Tuesday, Wednesday, Thursday, Friday, Saturday. Which day will you come by?",
+    "bot": "Pick up from the shop (Hamra) — open Monday – Saturday. Which day will you come by?",
     "keys": [
      [
       "Saturday 17/10",
@@ -3416,7 +3416,7 @@ window.RECORDED = {
      ],
      [
       "🔧 صيانة",
-      "❓ أسئلة"
+      "💬 أسئلة"
      ],
      [
       "📞 اتصلوا فيي",
@@ -3583,7 +3583,7 @@ window.RECORDED = {
      ],
      [
       "🔧 صيانة",
-      "❓ أسئلة"
+      "💬 أسئلة"
      ],
      [
       "📞 اتصلوا فيي",
@@ -3623,7 +3623,7 @@ window.RECORDED = {
      ],
      [
       "🔧 Réparations",
-      "❓ Questions"
+      "💬 Questions"
      ],
      [
       "📞 Rappelez-moi",
