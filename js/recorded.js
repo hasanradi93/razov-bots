@@ -1058,7 +1058,7 @@ window.RECORDED = {
     "me": "is my blood test ready?"
    },
    {
-    "bot": "Which number should we call? Tap the button below, or type it.",
+    "bot": "Which number should we reach you on? Tap the button below, or type it.",
     "keys": [
      [
       "📱 Share my number"
