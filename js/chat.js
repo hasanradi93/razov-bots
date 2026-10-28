@@ -5,13 +5,17 @@
  * "types" for about as long as a person would take to read its reply. "Play it for me" runs the
  * customer's side by itself.
  *
- * A conversation is a list of steps (see js/bots.js):
+ * A conversation is a list of steps, recorded from the bot itself (js/recorded.js, written by
+ * tools/record.ts from each chat's script in js/bots.js):
  *   { me: "text" }                 the customer writes
  *   { tap: "label" }               the customer taps a button the bot offered
  *   { bot: "text", keys: [[…]] }   the bot replies, optionally with rows of buttons
  *   { photo: "src", caption }      the bot sends a picture
  *   { album: ["src", …], caption } the bot sends several pictures at once
- *   { alert: "text" }              what reaches the business's own Telegram
+ *   { alert: "text", keys }        what reaches the business's own Telegram, with its buttons
+ *   { teamTap: "label" }           the business taps one of them — the visitor plays it too
+ *   { team: "text" }               the business writes in its own chat
+ *   { teamBot: "text", keys }      the bot answers the business, in the business's chat
  *
  * Live: when the bots' live server answers (live/server.ts, or SITE.liveApi), the phone also gets
  * a "Live" tab where the visitor writes whatever they like and the real bot answers.
@@ -30,7 +34,30 @@
   }
 
   function isUserStep(step) {
-    return step && ("me" in step || "tap" in step);
+    return step && ("me" in step || "tap" in step || "team" in step || "teamTap" in step);
+  }
+  const isDeskStep = (step) => "alert" in step || "teamBot" in step;
+
+  /** The bots' own row rule: three short buttons across, two of middling length, a long one alone. */
+  function rows(labels) {
+    const across = (label) => {
+      const length = [...label].length;
+      return length <= 6 ? 3 : length <= 16 ? 2 : 1;
+    };
+    const out = [];
+    let room = 0;
+    for (const label of labels) {
+      const row = out[out.length - 1];
+      const fits = Math.min(room, across(label));
+      if (row && row.length < fits) {
+        row.push(label);
+        room = fits;
+      } else {
+        out.push([label]);
+        room = across(label);
+      }
+    }
+    return out;
   }
 
   // The live bots: SITE.liveApi when set; on this machine, the server's usual address. One check
@@ -54,6 +81,9 @@
   /** Mounts a phone for one bot into `host`. Returns { stop }. */
   function mountChat(host, bot, icon) {
     const langs = Object.keys(bot.chats);
+    const recorded = (window.RECORDED || {})[bot.id] || {};
+    const stepsOf = (lang) => recorded[lang] || bot.chats[lang].steps || [];
+    const business = (bot.business && bot.business.name) || "the business";
     const state = {
       lang: langs[0],
       steps: [],
@@ -62,6 +92,9 @@
       auto: false,
       timers: new Set(),
       keys: null,
+      // The business's side: its chat as last shown, and the buttons under its latest message.
+      desk: null,
+      deskKeys: null,
       run: 0,
     };
 
@@ -210,14 +243,56 @@
       keys.classList.add("is-spent");
     }
 
+    function keyRows(keyLabels, cls) {
+      const keys = el("div", cls);
+      for (const row of keyLabels) {
+        const r = el("div", "keys-row");
+        for (const label of row) {
+          const k = el("button", "key", label);
+          k.type = "button";
+          k.dir = "auto";
+          k.tabIndex = -1;
+          r.append(k);
+        }
+        keys.append(r);
+      }
+      return keys;
+    }
+
+    // The business's own chat, shown as a box in the customer's: its messages, its buttons, what
+    // it writes and what the bot answers it. Steps that follow one another share one box.
+    function desk() {
+      if (state.desk && log.lastElementChild === state.desk) return state.desk;
+      const node = el("div", "msg msg-alert");
+      node.append(el("b", null, bot.alertLabel || "Sent to the business's Telegram"));
+      log.append(node);
+      state.desk = node;
+      return node;
+    }
+
+    function renderDesk(step) {
+      const box = desk();
+      if ("team" in step) {
+        const said = el("p", "desk-me", step.team);
+        said.dir = direction(step.team);
+        box.append(said);
+        return;
+      }
+      // The label is English and the message is usually Arabic: each gets its own direction.
+      const text = step.alert != null ? step.alert : step.teamBot;
+      const body = el("p", step.alert != null ? null : "desk-bot", text);
+      body.dir = direction(text);
+      box.append(body);
+      if (step.keys) {
+        const keys = keyRows(step.keys, "keys desk-keys");
+        box.append(keys);
+        state.deskKeys = keys;
+      }
+    }
+
     function renderBotStep(step) {
-      if ("alert" in step) {
-        // The label is English and the alert is usually Arabic: each gets its own direction.
-        const node = el("div", "msg msg-alert");
-        const body = el("p", null, step.alert);
-        body.dir = direction(step.alert);
-        node.append(el("b", null, bot.alertLabel || "Sent to the business's Telegram"), body);
-        log.append(node);
+      if (isDeskStep(step)) {
+        renderDesk(step);
         return;
       }
       if ("photo" in step) {
@@ -248,18 +323,7 @@
         log.append(bubble("msg-bot", step.bot));
       }
       if (step.keys) {
-        const keys = el("div", "keys");
-        for (const row of step.keys) {
-          const r = el("div", "keys-row");
-          for (const label of row) {
-            const k = el("button", "key", label);
-            k.type = "button";
-            k.dir = "auto";
-            k.tabIndex = -1;
-            r.append(k);
-          }
-          keys.append(r);
-        }
+        const keys = keyRows(step.keys, "keys");
         log.append(keys);
         state.keys = keys;
       }
@@ -268,13 +332,14 @@
     function setComposer(mode, text) {
       if (live.on) return;
       // aria-disabled, not disabled: a disabled button drops keyboard focus on every turn.
-      send.setAttribute("aria-disabled", String(mode !== "send" && mode !== "start" && mode !== "tap"));
+      send.setAttribute("aria-disabled", String(!["send", "start", "tap", "team", "teamTap"].includes(mode)));
       const finished = mode === "done" && bot.status === "live";
       const hadFocus = document.activeElement === send;
       send.hidden = finished;
       end.hidden = !finished;
       if (finished && hadFocus) end.focus();
       send.classList.toggle("is-start", mode === "start");
+      send.classList.toggle("is-team", mode === "team" || mode === "teamTap");
       if (mode === "start") {
         sendText.textContent = "Start";
         hint.textContent = "Press Start, as you would on Telegram.";
@@ -285,6 +350,14 @@
       } else if (mode === "tap") {
         sendText.textContent = text;
         hint.textContent = `Tap “${text}” in the chat, or here.`;
+      } else if (mode === "teamTap") {
+        sendText.textContent = text;
+        sendText.dir = "auto";
+        hint.textContent = `Now you are ${business}: tap “${text}” in its chat, or here.`;
+      } else if (mode === "team") {
+        sendText.textContent = text;
+        sendText.dir = "auto";
+        hint.textContent = `Now you are ${business}, writing in its own chat. Press to send.`;
       } else if (mode === "wait") {
         sendText.textContent = "…";
         hint.textContent = `${bot.short} is writing…`;
@@ -303,7 +376,7 @@
       try {
         while (state.i < state.steps.length && !isUserStep(state.steps[state.i])) {
           const step = state.steps[state.i];
-          if (!("alert" in step)) {
+          if (!isDeskStep(step)) {
             await wait(260);
             const typing = el("div", "typing");
             typing.setAttribute("aria-label", `${bot.short} is typing`);
@@ -338,9 +411,13 @@
       }
       if ("me" in step) {
         setComposer(state.i === 0 && step.me === "/start" ? "start" : "send", step.me);
-      } else if ("tap" in step) {
-        setComposer("tap", step.tap);
-        const key = state.keys && [...state.keys.querySelectorAll(".key")].find((k) => k.textContent === step.tap);
+      } else if ("team" in step) {
+        setComposer("team", step.team);
+      } else if ("tap" in step || "teamTap" in step) {
+        const label = "tap" in step ? step.tap : step.teamTap;
+        const keys = "tap" in step ? state.keys : state.deskKeys;
+        setComposer("tap" in step ? "tap" : "teamTap", label);
+        const key = keys && [...keys.querySelectorAll(".key")].find((k) => k.textContent === label);
         if (key) {
           key.classList.add("is-next");
           key.tabIndex = 0;
@@ -358,11 +435,16 @@
       const step = state.steps[state.i];
       if (!isUserStep(step)) return;
       if ("me" in step) {
-        log.append(bubble("msg-me", step.me === "/start" ? "/start" : step.me));
-      } else if (state.keys) {
-        // A tapped key is about to go; keep the keyboard in the phone.
-        if (document.activeElement && document.activeElement.classList.contains("key")) send.focus();
-        collapse(state.keys, step.tap);
+        log.append(bubble("msg-me", step.me));
+      } else if ("team" in step) {
+        renderDesk(step);
+      } else {
+        const keys = "tap" in step ? state.keys : state.deskKeys;
+        if (keys) {
+          // A tapped key is about to go; keep the keyboard in the phone.
+          if (document.activeElement && document.activeElement.classList.contains("key")) send.focus();
+          collapse(keys, "tap" in step ? step.tap : step.teamTap);
+        }
       }
       state.i++;
       scrollDown();
@@ -373,10 +455,12 @@
       state.run++;
       for (const id of state.timers) clearTimeout(id);
       state.timers.clear();
-      state.steps = bot.chats[state.lang].steps;
+      state.steps = stepsOf(state.lang);
       state.i = 0;
       state.busy = false;
       state.keys = null;
+      state.desk = null;
+      state.deskKeys = null;
       log.replaceChildren();
       sub.textContent = "bot";
       sub.classList.remove("is-typing");
@@ -406,9 +490,8 @@
       else if (reply.text) renderBotStep({ bot: reply.text });
       if (reply.buttons && reply.buttons.length) {
         const keys = el("div", "keys");
-        // Laid out as this bot lays them out on Telegram (js/bots.js: keyRows, shopRows).
-        const labels = reply.buttons.map((b) => b.label);
-        const layout = bot.id === "wholesale" ? shopRows(labels) : keyRows(labels);
+        // Laid out as the bots lay them out on Telegram.
+        const layout = rows(reply.buttons.map((b) => b.label));
         let i = 0;
         for (const rowLabels of layout) {
           const row = el("div", "keys-row");
@@ -427,7 +510,10 @@
         log.append(keys);
         live.keys = keys;
       }
-      if (reply.business) renderBotStep({ alert: reply.business });
+      if (reply.business) {
+        state.desk = null; // each message to the business in a box of its own
+        renderBotStep({ alert: reply.business });
+      }
       input.placeholder = reply.askPhone ? "Type your number (on Telegram it is a button)" : "Write a message…";
     }
 
@@ -499,7 +585,9 @@
       log.append(intro);
       // Ways to begin: Start, then each language's first message from the replays.
       chips.replaceChildren();
-      const openers = ["/start", ...Object.values(bot.chats).map((c) => (c.steps.find((st) => "me" in st && st.me !== "/start") || {}).me).filter(Boolean)];
+      // Not a bare greeting: Start already says hello.
+      const greeting = /^(hello|hi|bonjour|مرحبا)$/i;
+      const openers = ["/start", ...langs.map((lang) => (stepsOf(lang).find((st) => "me" in st && st.me !== "/start" && !greeting.test(st.me)) || {}).me).filter(Boolean)];
       for (const text of openers) {
         const chip = el("button", "chip", text === "/start" ? "Start" : text);
         chip.type = "button";

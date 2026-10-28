@@ -12,6 +12,7 @@
     scissors: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>',
     stethoscope: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3H4a1.5 1.5 0 0 0-1.5 1.5V9a5.5 5.5 0 0 0 11 0V4.5A1.5 1.5 0 0 0 12 3h-1"/><path d="M8 14.5v1a5.5 5.5 0 0 0 11 0v-3"/><circle cx="19" cy="10.5" r="2"/></svg>',
     crate: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3.5 7v10l8.5 4.5 8.5-4.5V7z"/><path d="m3.5 7 8.5 4.5L20.5 7M12 11.5v10M7.8 4.8l8.4 4.5"/></svg>',
+    device: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="13" height="9.5" rx="1.5"/><path d="M1 16.5h12"/><rect x="16" y="7.5" width="6.5" height="12.5" rx="1.6"/><path d="M18.6 17.6h1.3"/></svg>',
   };
   window.BotIcons = ICONS;
 

@@ -1,12 +1,12 @@
 /* The portal, drawn on one canvas.
  *
  * A starfield drifting toward the centre, a clock ring whose hands show the visitor's own time,
- * an eight-pointed star turning slowly, an iris over the core that opens once on load, and four
+ * an eight-pointed star turning slowly, an iris over the core that opens once on load, and five
  * planets — one per bot — on tilted orbits that pass in front of and behind the dial. Clicking a
  * planet opens that bot's world further down the page.
  *
  * Behind it, when the browser has WebGL, js/portal-gl.js draws the light inside the portal: a
- * whirlpool in the four worlds' colours, and streaks while the page is scrolled fast ("warp").
+ * whirlpool in the five worlds' colours, and streaks while the page is scrolled fast ("warp").
  *
  * Nothing here is needed to use the page: every planet is also a tab in the worlds section.
  */
@@ -37,12 +37,12 @@
     id: bot.id,
     name: bot.short,
     rgb: hexToRgb(bot.hue),
-    rx: [1.2, 1.46, 1.04, 1.68][i % 4],
-    flat: [0.36, 0.27, 0.5, 0.2][i % 4],
-    tilt: [-0.34, 0.2, 0.66, -0.1][i % 4],
-    speed: [0.15, -0.1, 0.19, -0.075][i % 4],
-    phase: i * (TAU / 4) + 0.5,
-    size: [9, 8, 10, 7.5][i % 4],
+    rx: [1.2, 1.46, 1.04, 1.68, 1.32][i % 5],
+    flat: [0.36, 0.27, 0.5, 0.2, 0.42][i % 5],
+    tilt: [-0.34, 0.2, 0.66, -0.1, 0.38][i % 5],
+    speed: [0.15, -0.1, 0.19, -0.075, 0.12][i % 5],
+    phase: i * (TAU / 5) + 0.5,
+    size: [9, 8, 10, 7.5, 8.5][i % 5],
   }));
 
   let w = 0;
@@ -146,7 +146,7 @@
       ctx.restore();
       return;
     }
-    // The world beyond: a glow, a slow rosette and four coloured currents.
+    // The world beyond: a glow, a slow rosette and one coloured current per world.
     const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, rc * (1.6 + 0.8 * open));
     glow.addColorStop(0, `rgba(${TEAL}, ${0.55 * open + 0.08})`);
     glow.addColorStop(0.45, `rgba(${TEAL}, ${0.16 * open})`);
@@ -168,7 +168,7 @@
       ctx.beginPath();
       for (let k = 0; k <= turns * 6; k++) {
         const f = k / (turns * 6);
-        const a = i * (TAU / 4) + f * TAU * 1.4 - t * 0.35;
+        const a = i * (TAU / orbits.length) + f * TAU * 1.4 - t * 0.35;
         const r = rc * (1 - f) * (0.92 + 0.08 * Math.sin(t * 2 + f * 9));
         const [x, y] = polar(r, a);
         k ? ctx.lineTo(x, y) : ctx.moveTo(x, y);

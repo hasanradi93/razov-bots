@@ -1,7 +1,7 @@
-/* Razov Bots — one page, four worlds.
+/* Razov Bots — one page, five worlds.
  *
  * The idea: an eight-pointed Levantine star that is also a clock face (Mawaeed means
- * "appointments"), opening like a portal onto four worlds — one per bot, each in its own colour.
+ * "appointments"), opening like a portal onto five worlds — one per bot, each in its own colour.
  * The night is teal, not black; each world brings its own hue, set as --world on the section.
  */
 
@@ -71,6 +71,7 @@
   --salon: #ff8fb3;
   --medical: #a3b6ff;
   --wholesale: #ffc857;
+  --electronics: #9be86a;
 
   --display: "Anybody", "Arial Narrow", system-ui, sans-serif;
   --text: "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -402,13 +403,13 @@ strong { font-weight: 500; }
 .how-head,
 .plans-head { max-width: var(--max); margin: 0 auto; }
 
-/* The orbit: four planets on one arc. Each is a tab. */
+/* The orbit: five planets on one arc. Each is a tab. */
 .orbit {
   position: relative;
   max-width: 980px;
   margin: clamp(36px, 6vh, 64px) auto 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 8px;
   padding-top: 36px;
 }
@@ -443,7 +444,8 @@ strong { font-weight: 500; }
   border-radius: var(--radius-m);
   -webkit-tap-highlight-color: transparent;
 }
-.planet:nth-child(1), .planet:nth-child(4) { transform: translateY(26px); }
+.planet:nth-child(1), .planet:nth-child(5) { transform: translateY(30px); }
+.planet:nth-child(2), .planet:nth-child(4) { transform: translateY(9px); }
 
 .planet-body {
   position: relative;
@@ -524,9 +526,20 @@ strong { font-weight: 500; }
   .orbit { gap: 2px; padding-top: 20px; }
   .orbit::before { display: none; }
   .planet { padding-inline: 0; gap: 10px; }
-  .planet:nth-child(1), .planet:nth-child(4) { transform: none; }
+  .planet:nth-child(n) { transform: none; }
   .planet-ring { inset: -8px; }
   .planet-state { display: none; }
+  /* Five across a phone: every column may shrink, and a name never pushes the page wider. */
+  .orbit { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .planet-name { font-size: 0.6875rem; hyphens: auto; }
+  .planet[aria-selected="true"] .planet-name { font-variation-settings: "wdth" 100; }
+}
+@media (max-width: 400px) {
+  /* Room at the sides for the chosen planet's ring and moon. */
+  .orbit { padding-inline: 8px; }
+  .planet-body { width: 46px; }
+  .planet-ring { inset: -6px; }
+  .planet-name { font-size: 0.625rem; letter-spacing: -0.01em; }
 }
 
 /* The stage: every world's panel sits in one grid cell, so a new one can open over the old. */
@@ -910,6 +923,30 @@ strong { font-weight: 500; }
   font-weight: 500;
   font-size: 0.8125rem;
 }
+/* The business's own chat inside the box: its buttons, what it writes, what the bot answers it. */
+.msg-alert .desk-keys {
+  width: 100%;
+  margin: 8px 0 2px;
+  animation: none;
+}
+.msg-alert .desk-keys .key { min-height: 34px; font-size: 0.8125rem; }
+.msg-alert .desk-me {
+  width: fit-content;
+  max-width: 85%;
+  margin: 8px 0 2px auto;
+  padding: 6px 11px;
+  border-radius: 12px 12px 4px 12px;
+  background: color-mix(in oklab, var(--world) 70%, #0e2328);
+  color: var(--night);
+  animation: msg-in 0.35s var(--ease-out) both;
+}
+.msg-alert .desk-bot {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgb(230 242 238 / 0.1);
+  animation: msg-in 0.35s var(--ease-out) both;
+}
+.msg-alert b + .desk-bot { margin-top: 0; padding-top: 0; border-top: 0; }
 
 @keyframes msg-in {
   from { opacity: 0; transform: translateY(8px) scale(0.96); }
@@ -1034,6 +1071,8 @@ strong { font-weight: 500; }
 .send.is-start .send-text { flex: none; font-weight: 500; letter-spacing: 0.06em; }
 .send.is-start .send-go { display: none; }
 .send.is-start:hover { background: rgb(230 242 238 / 0.05); }
+/* The visitor speaks for the business: dashed, like the business's chat in the log. */
+.send.is-team { border-style: dashed; background: rgb(7 26 29 / 0.8); }
 
 .end { width: 100%; }
 .end[hidden], .send[hidden] { display: none; }
@@ -1277,12 +1316,12 @@ strong { font-weight: 500; }
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale));
+  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics));
   transform-origin: left;
   transform: scaleX(var(--progress, 0));
 }
 .how-track[data-axis="y"] .how-fill {
-  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale));
+  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics));
   transform-origin: top;
   transform: scaleY(var(--progress, 0));
 }
