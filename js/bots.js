@@ -22,9 +22,70 @@ window.SITE = {
   },
 };
 
+/* The planets: the four kinds of work the bots do. Each bot is a comet circling one planet — its
+ * `planet` below, in the order of `bots` here (tools/planets.test.mjs checks the two agree). A planet
+ * opens with a link too: #booking, #shops, #business, #voice. The page is in English; each planet's
+ * name and line are also hand-written in Arabic and French, and shown beside the English. `tag` is
+ * the small line under the name. */
+window.PLANETS = [
+  {
+    id: "booking",
+    icon: "calendar",
+    hue: "#3fd9c4",
+    tag: "Mawaeed",
+    name: { en: "Booking", ar: "مواعيد", fr: "Rendez-vous" },
+    line: {
+      en: "Appointments booked in the chat, for clinics and salons.",
+      ar: "حجز المواعيد بالمحادثة، للعيادات والصالونات.",
+      fr: "Des rendez-vous pris dans la conversation, pour les cliniques et les salons.",
+    },
+    bots: ["dental", "salon", "medical"],
+  },
+  {
+    id: "shops",
+    icon: "bag",
+    hue: "#ffb347",
+    tag: "Order in the chat",
+    name: { en: "Shops", ar: "محلات", fr: "Boutiques" },
+    line: {
+      en: "Customers browse, choose and order in the chat; your team answers with one tap.",
+      ar: "الزبون بيتفرّج وبيختار وبيطلب بالمحادثة، وفريقك بيرد بكبسة زر.",
+      fr: "Le client regarde, choisit et commande dans la conversation ; votre équipe répond en un clic.",
+    },
+    bots: ["wholesale", "electronics", "snack"],
+  },
+  {
+    id: "business",
+    icon: "bolt",
+    hue: "#c6f24e",
+    tag: "Billing and operations",
+    name: { en: "Run your business", ar: "إدارة شغلك", fr: "Gérer votre activité" },
+    line: {
+      en: "The work behind the scenes: meter readings, bills, payments and reminders.",
+      ar: "شغل الكواليس: قراءة العدّادات، الفواتير، الدفعات والتذكير.",
+      fr: "Le travail en coulisses : relevés de compteurs, factures, paiements et rappels.",
+    },
+    bots: ["generator"],
+  },
+  {
+    id: "voice",
+    icon: "phone",
+    hue: "#b28cff",
+    tag: "Phone calls only",
+    name: { en: "Voice", ar: "مكالمات", fr: "Voix" },
+    line: {
+      en: "Phone calls only: an AI voice that answers the clinic's line.",
+      ar: "مكالمات بس: مساعِدة بالصوت بتردّ على تلفون العيادة.",
+      fr: "Uniquement des appels : une voix IA qui répond au téléphone de la clinique.",
+    },
+    bots: ["voice"],
+  },
+];
+
 window.BOTS = [
   {
     id: "dental",
+    planet: "booking",
     short: "Dental",
     name: "Dental Practice",
     hue: "#5ee1e6",
@@ -115,6 +176,7 @@ window.BOTS = [
   },
   {
     id: "salon",
+    planet: "booking",
     short: "Salon",
     name: "Beauty Salon",
     hue: "#ff8fb3",
@@ -224,6 +286,7 @@ window.BOTS = [
   },
   {
     id: "medical",
+    planet: "booking",
     short: "Medical",
     name: "Medical Practice",
     hue: "#a3b6ff",
@@ -316,6 +379,7 @@ window.BOTS = [
   },
   {
     id: "wholesale",
+    planet: "shops",
     short: "Wholesale",
     name: "Wholesale Catalogue",
     hue: "#ffc857",
@@ -441,6 +505,7 @@ window.BOTS = [
   },
   {
     id: "electronics",
+    planet: "shops",
     short: "Electronics",
     name: "Electronics Store",
     hue: "#9be86a",
@@ -553,6 +618,7 @@ window.BOTS = [
   },
   {
     id: "snack",
+    planet: "shops",
     short: "Snack",
     name: "Snack Restaurant",
     hue: "#ff7b54",
@@ -685,9 +751,162 @@ window.BOTS = [
       },
     },
   },
+  // Not live yet. Its conversations are recorded from its own engine (live/bots.ts, demo mode), like
+  // every other chat bot's; the visitor plays the generator's owner, and in the demo nothing is sent.
+  // From the design: .claude/planning/projects/S1-ai-agents-service/specs/2026-11-06-ishtirak-design.md
+  {
+    id: "generator",
+    planet: "business",
+    short: "Ishtirak",
+    name: "Ishtirak",
+    hue: "#ecf25e",
+    icon: "meter",
+    // Live on the Oracle server since 2026-11-07 (created by the owner that morning).
+    username: "razovtech_generator_bot",
+    display: "Ishtirak · Doe Generator demo",
+    status: "live",
+    statusText: "Live on Telegram",
+    liveNote: "Scan with your phone or press the button, then press Start: you become the owner of your own Doe Generator, with 20 invented subscribers nobody else sees. Then type a reading, like “112 4390”.",
+    pitch: "The neighbourhood generator's billing desk, on Telegram. The owner or his meter reader enters each reading — typed, or a photo of the meter — and every bill is worked out from the Ministry's tariff for the month, sent, and followed until it is paid.",
+    does: [
+      "📟 Readings: walks the subscribers one by one — type the new reading or send a photo of the meter — and shows each bill as it goes. “112 4390, 113 5120” in one message works too.",
+      "Works out every bill from the Ministry of Energy and Water's tariff for the month: the kWh used times the price, the fixed fee for the amps, and anything still owed from earlier months, shown apart.",
+      "Asks before it bills: a reading lower than last month's — did the meter go round? — or three times the usual.",
+      "💰 Who hasn't paid: each subscriber with what they owe, and ✅ Paid, 💵 Part, 🔔 Remind all. A payment is never edited away: a mistake is undone by a correcting entry.",
+      "Sends each bill to the subscriber on Telegram — or, for one who is not on it, opens WhatsApp with the bill already written: one tap, no fees.",
+      "⚡ Power cut: one post on the generator's Telegram channel says the power is off and about when it is back, then that it is back.",
+      "Never adds what the tariff forbids — no VAT, upkeep or solar fees — and every bill says so.",
+    ],
+    business: {
+      name: "Doe Generator",
+      about: "A neighbourhood generator in Hamra, Beirut: invented, billed at the real October 2026 tariff",
+      facts: [
+        { label: "Subscribers", value: "20 invented ones, 5 to 25 amps: 17 on a meter, 3 on a flat monthly amount" },
+        { label: "Tariff", value: "October 2026: 52,622 LBP a kWh in the city, 57,884 past 300 m of line or in villages above 700 m. Fixed fee 385,000 LBP for 5 A, 685,000 for 10 A" },
+        { label: "Payments", value: "Cash or Whish, marked with one tap. Nothing is paid in the chat" },
+        { label: "In the demo", value: "You are the owner: Start makes a Doe Generator of your own, that nobody else sees" },
+        { label: "Speaks", value: "Lebanese Arabic, Arabizi, English, French" },
+      ],
+      menuTitle: "A bill, worked out as the bot does it",
+      menuNote: "180 kWh on a 5 A meter, at the October 2026 tariff, in Lebanese pounds.",
+      menu: [
+        { name: "180 kWh × 52,622", detail: "energy", price: "9,471,960" },
+        { name: "Fixed fee, 5 A", detail: "fixed", price: "385,000" },
+        { name: "To pay", detail: "LBP", price: "9,856,960", total: true },
+      ],
+      prices: {
+        title: "What it costs",
+        note: "Set up with your subscribers from your own Excel sheet. Paid in Lebanon, in cash or by Whish.",
+        rows: [{ name: "Ishtirak for your generator", detail: "per month", price: "from $15" }],
+      },
+    },
+    chats: {
+      en: {
+        label: "English",
+        intro: "Monday 2 November, the month's readings, led by the buttons. The owner goes through the meters one by one: each reading typed becomes its bill at once, at the Ministry's October tariff. A break, then who hasn't paid, and the reminder each of them would receive — in the demo, nothing is sent.",
+        // A generator bills at the start of the month: October's bills, on Monday 2 November.
+        at: "2026-11-02T10:00:00+02:00",
+        script: [
+          { me: "/start" },
+          { tap: "🌐" },
+          { tap: "English" },
+          { tap: "📟" },
+          { me: "4130" },
+          { me: "7960" },
+          { tap: "⏸" },
+          { tap: "🏠" },
+          { tap: "💰" },
+          { tap: "🔔" },
+        ],
+      },
+      ar: {
+        label: "عربي",
+        intro: "The same morning in Lebanese Arabic, written in words: a meter number and its reading in one message, and the bill — then the bill exactly as the subscriber receives it, the Ministry's sum line by line. Then a part payment, written the way one says it: Abu Ali paid 5 million.",
+        at: "2026-11-02T10:00:00+02:00",
+        script: [
+          { me: "/start" },
+          { me: "112 4390" },
+          { tap: "✅" },
+          { tap: "👀" },
+          { me: "أبو علي دفع ٥ مليون" },
+          { tap: "✅ دفع كاش" },
+        ],
+      },
+      fr: {
+        label: "Français",
+        intro: "Monday evening, in French: a power cut. One tap says about when it is back; the post is shown before it goes out. Then the power is back, and that is posted too. In the real bot the posts go to the generator's Telegram channel and to every subscriber linked to it; in the demo, nothing is sent.",
+        at: "2026-11-02T18:00:00+02:00",
+        script: [
+          { me: "/start" },
+          { tap: "🌐" },
+          { tap: "Français" },
+          { tap: "⚡" },
+          { tap: "⏱ 2 h" },
+          { tap: "📢" },
+          { tap: "🏠" },
+          { tap: "⚡" },
+          { tap: "✅" },
+          { tap: "📢" },
+        ],
+      },
+    },
+  },
+  // Voice only: no chat at all. The phone shows a call card (`call`) instead.
+  // From the design: .claude/planning/projects/S1-ai-agents-service/specs/2026-11-06-call-center-design.md
+  {
+    id: "voice",
+    planet: "voice",
+    short: "Voice",
+    name: "Mawaeed Voice",
+    hue: "#c59bff",
+    icon: "wave",
+    username: "",
+    display: "Mawaeed Voice · Doe Dental Clinic demo",
+    status: "soon",
+    statusText: "Phone line soon",
+    pitch: "The clinic's phone, answered when the front desk cannot — after hours, on a busy line, at lunch. Callers just talk: it answers from the clinic's own information and books into the same appointment book as the clinic's Telegram bot.",
+    does: [
+      "Answers in Lebanese Arabic, English or French, and says first that it is the clinic's automatic assistant and keeps a written note of the call.",
+      "Books, moves and cancels appointments in the clinic's real diary — the one its Telegram bot books into — and reads each booking back before making it.",
+      "Answers hours, services, prices and the address from the clinic's own information; anything else becomes a call back from the team.",
+      "Hears an emergency and gives 140 first; someone in crisis is given Embrace, 1564.",
+      "“I'd like a person” — «بدي حدا» — becomes a call-back request in the clinic's Telegram at once, 🚨 when it is urgent.",
+      "After every call, a summary reaches the clinic's Telegram: who called, the number, and what was booked, moved or cancelled.",
+    ],
+    business: {
+      name: "Doe Dental Clinic",
+      about: "Hamra Street, Beirut — the dental demo's clinic, by phone",
+      facts: [
+        { label: "Answers", value: "When the front desk cannot: after hours, a busy line, the lunch break" },
+        { label: "Calls", value: "Incoming only, up to 6 minutes each. No menu to press: the caller just talks" },
+        { label: "Keeps", value: "A written note of every call, never the recording" },
+        { label: "Speaks", value: "Lebanese Arabic, English, French" },
+      ],
+      menuTitle: "Prices",
+      menuNote: "Paid once. The clinic pays for its own phone number and call minutes.",
+      menu: [
+        { name: "Starter", detail: "a demo-grade setup", price: "$99" },
+        { name: "Standard", detail: "", price: "$249" },
+        { name: "With WhatsApp calls", detail: "", price: "$499" },
+      ],
+    },
+    soonTitle: "A demo line soon",
+    soonNote: "Mawaeed Voice is on its way. Once its demo line is set up, you call it from your own phone and talk to Doe Dental Clinic.",
+    call: {
+      title: "Call it",
+      kind: "Demo line",
+      button: "Call the demo line — soon",
+      text: "A real phone call: you talk, it answers in Lebanese Arabic, English or French, and books you into Doe Dental Clinic's diary.",
+      note: "Voice only: no chat and no buttons. The number goes here once the demo line is set up.",
+    },
+    chats: {},
+  },
 ];
 
-/* What every bot does — only what the code does today. */
+/* What every chat bot does — only what the code does today, and only for the chat bots on these
+ * planets, whose conversations are recorded on the page (tools/page.test.mjs checks both). Ishtirak
+ * bills rather than books and Mawaeed Voice only talks: their own worlds say what they do. */
+window.EVERY_ON = ["booking", "shops"];
 window.EVERY = [
   {
     icon: "languages",
@@ -696,8 +915,8 @@ window.EVERY = [
   },
   {
     icon: "calendar",
-    title: "Books, moves and cancels",
-    text: "Only times that are really free in your diary, inside your hours and breaks. Never two people in one slot. Every booking gets a reference.",
+    title: "Books, and takes orders",
+    text: "Appointments only at times that are really free in your diary, inside your hours and breaks — never two people in one slot. An order is shown back in full before it is sent. Every booking and order gets a reference.",
   },
   {
     icon: "bell",
@@ -707,22 +926,22 @@ window.EVERY = [
   {
     icon: "sparkle",
     title: "Answers questions with AI",
-    text: "Prices, services, parking, payment — answered from your own information. If the AI is down, it says so and still books.",
+    text: "Prices, services, parking, payment — answered from your own information. If the AI is down, it says so and still books and takes orders.",
   },
   {
     icon: "shield",
     title: "Knows what not to answer",
-    text: "No medical advice, ever: it offers a visit instead. An emergency is sent to 140 before anything else, and someone in crisis is given a crisis line — Embrace, 1564 — never a menu.",
+    text: "No medical advice, ever: a clinic's bot offers a visit instead. An emergency is sent to 140 before anything else, and someone in crisis is given a crisis line — Embrace, 1564 — never a menu.",
   },
   {
     icon: "relay",
     title: "Buttons, not dead ends",
-    text: "A menu of departments, every question with its answers as buttons, and “did you mean…” instead of “I did not understand”. 📞 Call me asks what it is about and how to call back; a note goes on the appointment word for word.",
+    text: "A menu of departments, every question with its answers as buttons, and “did you mean…” instead of “I did not understand”. 📞 Call me asks what it is about and how to call back; a note for a clinic goes on the appointment word for word.",
   },
   {
     icon: "moon",
     title: "Open when you are closed",
-    text: "At night, on Sunday or on a holiday it answers and books into your real opening hours. Every demo here runs around the clock on a server.",
+    text: "At night, on Sunday or on a holiday it answers, and books or takes the order for your real opening hours. Each one live on Telegram runs around the clock on a server.",
   },
   {
     icon: "photo",
@@ -768,5 +987,5 @@ window.PLANS = {
       ],
     },
   ],
-  note: "Hosting is not included: the bot runs on a computer that stays on, or a small server for about $4 a month. You also need a Telegram account and a free Google AI key. The shop and restaurant bots — wholesale, electronics, snack — are priced on their own: ask us.",
+  note: "Hosting is not included: the bot runs on a computer that stays on, or a small server for about $4 a month. You also need a Telegram account and a free Google AI key. The shop and restaurant bots — wholesale, electronics, snack — are priced on their own: ask us. Ishtirak and Mawaeed Voice have their own prices, in their worlds above.",
 };

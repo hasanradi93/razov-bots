@@ -3385,7 +3385,7 @@ window.RECORDED = {
     ]
    },
    {
-    "bot": "✅ Your order U9AKYP is confirmed. We'll tell you as soon as it leaves."
+    "bot": "✅ Your order U9AKYP is confirmed. We'll tell you as soon as it's ready to collect at the shop."
    },
    {
     "teamTap": "🏬 جاهزة بالمحل"
@@ -3551,7 +3551,7 @@ window.RECORDED = {
     "tap": "👍 إيه، كمّلوا"
    },
    {
-    "bot": "👍 تمام — الفني بيبلّش هلّق بـR-1001. منخبرك أوّل ما يجهز.",
+    "bot": "👍 تمام — $60.00 لـR-1001، والفني بيبلّش هلّق. منخبرك أوّل ما يجهز.",
     "keys": [
      [
       "🏠 القائمة"
@@ -5188,5 +5188,541 @@ window.RECORDED = {
     "bot": "🛍 S8AK24 est prête — venez la chercher. Questions : +961 1 000 000."
    }
   ]
- }
+ },
+ "generator": {
+  "en": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "⚡ أهلا فيك بـ «اشتراك» — جرّب كأنك صاحب «مولّد دو» بالحمرا.\n⚡ Welcome to Ishtirak — try it as the owner of Doe Generator in Hamra.\n⚡ Bienvenue sur Ishtirak — essayez-le comme propriétaire de Doe Generator à Hamra.\n\nشو بدك تعمل؟\n\n🧪 تجربة: 20 مشترك وهمي بالحمرا، قراءات أيلول، وتسعيرة الوزارة لتشرين الأول. ما في شي بينبعت لحدا.",
+    "keys": [
+     [
+      "📟 القراءات",
+      "🧾 فواتير الشهر"
+     ],
+     [
+      "💰 مين ما دفع",
+      "👥 المشتركين"
+     ],
+     [
+      "⚡ قطع الكهربا",
+      "💡 التسعيرة"
+     ],
+     [
+      "📊 ملخّص الشهر",
+      "🌐 اللغة"
+     ],
+     [
+      "🔄 التجربة من جديد"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose a language · Choisissez la langue",
+    "keys": [
+     [
+      "العربية",
+      "Arabizi"
+     ],
+     [
+      "English",
+      "Français"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "English"
+   },
+   {
+    "bot": "✅ English it is.\n\nWhat would you like to do?\n\n🧪 Demo: 20 invented subscribers in Hamra, September's readings, and the Ministry's October tariff. Nothing is sent to anyone.",
+    "keys": [
+     [
+      "📟 Readings"
+     ],
+     [
+      "🧾 This month's bills"
+     ],
+     [
+      "💰 Who hasn't paid"
+     ],
+     [
+      "👥 Subscribers",
+      "⚡ Power cut"
+     ],
+     [
+      "💡 Tariff",
+      "📊 Month summary"
+     ],
+     [
+      "🌐 Language"
+     ],
+     [
+      "🔄 Start the demo again"
+     ]
+    ]
+   },
+   {
+    "tap": "📟 Readings"
+   },
+   {
+    "bot": "📟 Umm Sami Khoury · meter 101 · last 3,990 (1 of 17)\nType the new reading, or send a photo of the meter.",
+    "keys": [
+     [
+      "⏭ Skip",
+      "⏸ Stop for now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "4130"
+   },
+   {
+    "bot": "🧾 Umm Sami Khoury · 101 · 140 kWh · 7,752,080 LBP\n\n📟 Georges Haddad · meter 102 · last 7,700 (2 of 17)\nType the new reading, or send a photo of the meter.",
+    "keys": [
+     [
+      "✅ Paid",
+      "⏳ Not yet"
+     ],
+     [
+      "✏️ Fix the reading"
+     ],
+     [
+      "⏭ Skip",
+      "⏸ Stop for now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "me": "7960"
+   },
+   {
+    "bot": "🧾 Georges Haddad · 102 · 260 kWh · 14,366,720 LBP\n\n📟 Rima Chamseddine · meter 103 · last 2,235 (3 of 17)\nType the new reading, or send a photo of the meter.",
+    "keys": [
+     [
+      "✅ Paid",
+      "⏳ Not yet"
+     ],
+     [
+      "✏️ Fix the reading"
+     ],
+     [
+      "⏭ Skip",
+      "⏸ Stop for now"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "⏸ Stop for now"
+   },
+   {
+    "bot": "⏸ Stopped here. When you're back, tap 📟 Readings and we carry on from Rima Chamseddine.",
+    "keys": [
+     [
+      "📟 Readings",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🏠 Menu"
+   },
+   {
+    "bot": "What would you like to do?\n\n🧪 Demo: 20 invented subscribers in Hamra, September's readings, and the Ministry's October tariff. Nothing is sent to anyone.",
+    "keys": [
+     [
+      "📟 Readings"
+     ],
+     [
+      "🧾 This month's bills"
+     ],
+     [
+      "💰 Who hasn't paid"
+     ],
+     [
+      "👥 Subscribers",
+      "⚡ Power cut"
+     ],
+     [
+      "💡 Tariff",
+      "📊 Month summary"
+     ],
+     [
+      "🌐 Language"
+     ],
+     [
+      "🔄 Start the demo again"
+     ]
+    ]
+   },
+   {
+    "tap": "💰 Who hasn't paid"
+   },
+   {
+    "bot": "💰 Who hasn't paid (10) — 126,043,800 LBP in all:\n• Umm Sami Khoury (101): 7,752,080 LBP\n• Georges Haddad (102): 14,366,720 LBP\n• Abu Khalil Nassar (104): 21,985,000 LBP\n• Walid Sinno (107): 6,385,000 LBP\n• Abu Jad Azar (109): 14,985,000 LBP\n• Layla Jaber (113): 13,685,000 LBP\n• Mona Halabi (117): 6,885,000 LBP\n• Abu Marwan Zein (no meter): 16,000,000 LBP\n   this month 8,000,000 LBP + earlier 8,000,000 LBP\n• Jamila Rahhal (no meter): 8,000,000 LBP\n• Fadi Sarhal (no meter): 16,000,000 LBP\n\nTap a name to record a payment:",
+    "keys": [
+     [
+      "💰 Umm Sami Khoury"
+     ],
+     [
+      "💰 Georges Haddad"
+     ],
+     [
+      "💰 Abu Khalil Nassar"
+     ],
+     [
+      "💰 Walid Sinno",
+      "💰 Abu Jad Azar"
+     ],
+     [
+      "💰 Layla Jaber",
+      "💰 Mona Halabi"
+     ],
+     [
+      "💰 Abu Marwan Zein"
+     ],
+     [
+      "💰 Jamila Rahhal",
+      "💰 Fadi Sarhal"
+     ],
+     [
+      "🔔 Remind all",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🔔 Remind all"
+   },
+   {
+    "bot": "🔔 In the demo nothing is sent. This is the reminder each one who owes would receive:\n\n🔔 Doe Generator: a friendly reminder — you owe 7,752,080 LBP for your generator subscription. Pay cash to the collector, or by Whish. Thank you!",
+    "keys": [
+     [
+      "📲 WhatsApp",
+      "🏠 Menu"
+     ]
+    ]
+   }
+  ],
+  "ar": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "⚡ أهلا فيك بـ «اشتراك» — جرّب كأنك صاحب «مولّد دو» بالحمرا.\n⚡ Welcome to Ishtirak — try it as the owner of Doe Generator in Hamra.\n⚡ Bienvenue sur Ishtirak — essayez-le comme propriétaire de Doe Generator à Hamra.\n\nشو بدك تعمل؟\n\n🧪 تجربة: 20 مشترك وهمي بالحمرا، قراءات أيلول، وتسعيرة الوزارة لتشرين الأول. ما في شي بينبعت لحدا.",
+    "keys": [
+     [
+      "📟 القراءات",
+      "🧾 فواتير الشهر"
+     ],
+     [
+      "💰 مين ما دفع",
+      "👥 المشتركين"
+     ],
+     [
+      "⚡ قطع الكهربا",
+      "💡 التسعيرة"
+     ],
+     [
+      "📊 ملخّص الشهر",
+      "🌐 اللغة"
+     ],
+     [
+      "🔄 التجربة من جديد"
+     ]
+    ]
+   },
+   {
+    "me": "112 4390"
+   },
+   {
+    "bot": "📟 أبو علي (112): قراءة جديدة 4,390 (آخر وحدة 4,210). منسجّلها؟",
+    "keys": [
+     [
+      "✅ إيه، سجّل",
+      "✏️ لا، غيّر"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ إيه، سجّل"
+   },
+   {
+    "bot": "🧾 أبو علي · 112 · 180 ك.و.س · 9,856,960 ل.ل",
+    "keys": [
+     [
+      "✅ دفع",
+      "✏️ صحّح القراءة"
+     ],
+     [
+      "👀 شو بيوصلو",
+      "📟 القراءات"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "👀 شو بيوصلو"
+   },
+   {
+    "bot": "👀 هيدا اللي بيوصل لـ أبو علي على تلغرام (بالتجربة ما بينبعت لحدا):\n\n⚡ مولّد دو — فاتورة تشرين الأول 2026\n👤 المشترك: أبو علي · 5 أمبير · عدّاد رقم 112\n📟 القراءة السابقة: 4,210 · القراءة الحالية: 4,390\n🔌 الاستهلاك: 180 كيلوواط ساعة\n💡 سعر الكيلوواط حسب تسعيرة وزارة الطاقة والمياه لشهر تشرين الأول: 52,622 ل.ل\n180 × 52,622 = 9,471,960 ل.ل\n🧾 الاشتراك الثابت (5 أمبير): 385,000 ل.ل\n💰 المجموع: 9,856,960 ل.ل\n✅ الدفع نقداً للجابي أو عبر Whish\nما في أي رسم زيادة عن تسعيرة الوزارة.\n\n📲 وإذا مش على تلغرام، زرّ واتساب بيفتحلك الرسالة مكتوبة — وإنت بتختار لمين تبعتها.",
+    "keys": [
+     [
+      "📲 واتساب",
+      "⬅️ رجوع"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "me": "أبو علي دفع ٥ مليون"
+   },
+   {
+    "bot": "💵 أبو علي دفع 5,000,000 ل.ل؟ بعدها: بقي عليه 4,856,960 ل.ل.",
+    "keys": [
+     [
+      "✅ دفع كاش",
+      "✅ دفع Whish"
+     ],
+     [
+      "✏️ لا، غيّر",
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ دفع كاش"
+   },
+   {
+    "bot": "✅ تسجّلت: أبو علي دفع 5,000,000 ل.ل (كاش). بقي عليه 4,856,960 ل.ل.",
+    "keys": [
+     [
+      "↩️ تراجع",
+      "💰 مين ما دفع"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   }
+  ],
+  "fr": [
+   {
+    "me": "/start"
+   },
+   {
+    "bot": "⚡ أهلا فيك بـ «اشتراك» — جرّب كأنك صاحب «مولّد دو» بالحمرا.\n⚡ Welcome to Ishtirak — try it as the owner of Doe Generator in Hamra.\n⚡ Bienvenue sur Ishtirak — essayez-le comme propriétaire de Doe Generator à Hamra.\n\nشو بدك تعمل؟\n\n🧪 تجربة: 20 مشترك وهمي بالحمرا، قراءات أيلول، وتسعيرة الوزارة لتشرين الأول. ما في شي بينبعت لحدا.",
+    "keys": [
+     [
+      "📟 القراءات",
+      "🧾 فواتير الشهر"
+     ],
+     [
+      "💰 مين ما دفع",
+      "👥 المشتركين"
+     ],
+     [
+      "⚡ قطع الكهربا",
+      "💡 التسعيرة"
+     ],
+     [
+      "📊 ملخّص الشهر",
+      "🌐 اللغة"
+     ],
+     [
+      "🔄 التجربة من جديد"
+     ]
+    ]
+   },
+   {
+    "tap": "🌐 اللغة"
+   },
+   {
+    "bot": "🌐 اختار اللغة · Choose a language · Choisissez la langue",
+    "keys": [
+     [
+      "العربية",
+      "Arabizi"
+     ],
+     [
+      "English",
+      "Français"
+     ],
+     [
+      "🏠 القائمة"
+     ]
+    ]
+   },
+   {
+    "tap": "Français"
+   },
+   {
+    "bot": "✅ On continue en français.\n\nQue voulez-vous faire ?\n\n🧪 Démo : 20 abonnés inventés à Hamra, les relevés de septembre et le tarif d'octobre du ministère. Rien n'est envoyé à personne.",
+    "keys": [
+     [
+      "📟 Relevés"
+     ],
+     [
+      "🧾 Factures du mois"
+     ],
+     [
+      "💰 Impayés",
+      "👥 Abonnés"
+     ],
+     [
+      "⚡ Coupure",
+      "💡 Tarif"
+     ],
+     [
+      "📊 Bilan du mois",
+      "🌐 Langue"
+     ],
+     [
+      "🔄 Recommencer la démo"
+     ]
+    ]
+   },
+   {
+    "tap": "⚡ Coupure"
+   },
+   {
+    "bot": "⚡ Coupure maintenant — retour vers quelle heure ?\n⏱ Tapez l'heure, comme 18:30, ou « 2 heures ».",
+    "keys": [
+     [
+      "⏱ 1 h",
+      "⏱ 2 h",
+      "⏱ 4 h"
+     ],
+     [
+      "❔ Je ne sais pas",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "⏱ 2 h"
+   },
+   {
+    "bot": "📢 Le message sera :\n\n⚡ Doe Generator : coupure de courant en ce moment, retour vers 20:00. Désolés pour le dérangement.\n\nOn le publie ?",
+    "keys": [
+     [
+      "📢 Publier"
+     ],
+     [
+      "✏️ Changer l'heure"
+     ],
+     [
+      "❌ Annuler",
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "📢 Publier"
+   },
+   {
+    "bot": "⚡ Doe Generator : coupure de courant en ce moment, retour vers 20:00. Désolés pour le dérangement.\n\n📢 Dans la vraie version, ceci part sur la chaîne du générateur et à chaque abonné lié sur Telegram. Dans la démo, rien n'est envoyé.",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "🏠 Menu"
+   },
+   {
+    "bot": "Que voulez-vous faire ?\n\n🧪 Démo : 20 abonnés inventés à Hamra, les relevés de septembre et le tarif d'octobre du ministère. Rien n'est envoyé à personne.",
+    "keys": [
+     [
+      "📟 Relevés"
+     ],
+     [
+      "🧾 Factures du mois"
+     ],
+     [
+      "💰 Impayés",
+      "👥 Abonnés"
+     ],
+     [
+      "⚡ Coupure",
+      "💡 Tarif"
+     ],
+     [
+      "📊 Bilan du mois",
+      "🌐 Langue"
+     ],
+     [
+      "🔄 Recommencer la démo"
+     ]
+    ]
+   },
+   {
+    "tap": "⚡ Coupure"
+   },
+   {
+    "bot": "⚡ Le courant est coupé depuis 18:00, retour prévu vers 20:00. Est-il revenu ?",
+    "keys": [
+     [
+      "✅ Le courant est revenu"
+     ],
+     [
+      "✏️ Changer l'heure"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "✅ Le courant est revenu"
+   },
+   {
+    "bot": "📢 Le message sera :\n\n✅ Doe Generator : le courant est revenu. Merci de votre patience.\n\nOn le publie ?",
+    "keys": [
+     [
+      "📢 Publier",
+      "❌ Annuler"
+     ],
+     [
+      "🏠 Menu"
+     ]
+    ]
+   },
+   {
+    "tap": "📢 Publier"
+   },
+   {
+    "bot": "✅ Doe Generator : le courant est revenu. Merci de votre patience.\n\n📢 Dans la vraie version, ceci part sur la chaîne du générateur et à chaque abonné lié sur Telegram. Dans la démo, rien n'est envoyé.",
+    "keys": [
+     [
+      "🏠 Menu"
+     ]
+    ]
+   }
+  ]
+ },
+ "voice": {}
 };

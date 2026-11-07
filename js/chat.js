@@ -500,6 +500,11 @@
             k.type = "button";
             k.dir = "auto";
             k.addEventListener("click", () => {
+              // A link button (Ishtirak's 📲 WhatsApp) opens its link, as on Telegram, and tells the bot nothing.
+              if (button.url) {
+                if (/^https:\/\//.test(button.url)) window.open(button.url, "_blank", "noopener");
+                return;
+              }
               if (live.busy || keys.classList.contains("is-spent")) return;
               liveSend(button.send, null, k);
             });

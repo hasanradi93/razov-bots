@@ -1,7 +1,8 @@
-/* Razov Bots — one page, six worlds.
+/* Razov Bots — one page, four planets, a world for every bot.
  *
  * The idea: an eight-pointed Levantine star that is also a clock face (Mawaeed means
- * "appointments"), opening like a portal onto six worlds — one per bot, each in its own colour.
+ * "appointments"), opening like a portal onto the worlds — four planets, one per kind of work, with
+ * the bots circling them as comets, and one world per bot, each in its own colour.
  * The night is teal, not black; each world brings its own hue, set as --world on the section.
  */
 
@@ -73,6 +74,8 @@
   --wholesale: #ffc857;
   --electronics: #9be86a;
   --snack: #ff7b54;
+  --generator: #ecf25e;
+  --voice: #c59bff;
 
   --display: "Anybody", "Arial Narrow", system-ui, sans-serif;
   --text: "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -356,6 +359,68 @@ strong { font-weight: 500; }
   .hero-hint { display: none; }
 }
 
+/* The four planets as links, laid over the canvas: js/hero.js moves each with its planet. Their
+   box scales and fades with the canvas as the page scrolls away from the portal. */
+.hero-planets {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  transform-origin: 66% 50%;
+  will-change: transform, opacity;
+}
+.hero-copy { position: relative; z-index: 1; }
+.hero-planet {
+  --hit: 64px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--hit);
+  height: var(--hit);
+  margin: calc(var(--hit) / -2) 0 0 calc(var(--hit) / -2);
+  border-radius: 50%;
+  color: var(--mist);
+  text-decoration: none;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.hero-planet:focus-visible { outline: 2px solid var(--p); outline-offset: 0; border-radius: 50%; }
+.hero-planet-label {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  padding: 7px 13px 8px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklab, var(--p) 55%, transparent);
+  background: rgb(7 26 29 / 0.82);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  /* --dx (js/hero.js) slides it along so it never leaves the screen at the edge of an orbit. */
+  translate: calc(-50% + var(--dx, 0px)) 6px;
+  transition: opacity 0.25s, translate 0.4s var(--ease-out);
+  pointer-events: none;
+}
+/* No room above the planet, under the bar: the name goes below it. */
+.hero-planet.is-low .hero-planet-label { bottom: auto; top: calc(100% + 4px); translate: calc(-50% + var(--dx, 0px)) -6px; }
+.hero-planet-label strong {
+  display: block;
+  font-family: var(--display);
+  font-variation-settings: "wdth" 115;
+  font-weight: 720;
+  font-size: 0.9375rem;
+  color: var(--p);
+}
+.hero-planet-label span { display: block; margin-top: 2px; font-size: 0.75rem; color: var(--mist-dim); }
+.hero-planet:hover .hero-planet-label,
+.hero-planet:focus-visible .hero-planet-label { opacity: 1; translate: calc(-50% + var(--dx, 0px)) 0; }
+/* Until the planets have come out on their orbits, there is nothing to point at. */
+.hero-planets:not(.is-on) .hero-planet { visibility: hidden; }
+@media (max-width: 899px) { .hero-planets { transform-origin: 50% 32%; } }
+
 @media (max-height: 560px) and (orientation: landscape) {
   .hero { padding-top: 96px; }
   .hero-title { font-size: clamp(2.6rem, 8vw, 5rem); }
@@ -387,6 +452,9 @@ strong { font-weight: 500; }
   padding: clamp(80px, 12vh, 140px) var(--gutter) clamp(64px, 10vh, 120px);
   transition: --world 0.9s var(--ease-in-out);
   isolation: isolate;
+  /* The planets' turning comets, and the ring that opens a world, never widen the page. "clip",
+     not "hidden": the phone stays sticky. */
+  overflow-x: clip;
 }
 .worlds::before {
   /* The world's light, rising behind the stage. */
@@ -404,24 +472,24 @@ strong { font-weight: 500; }
 .how-head,
 .plans-head { max-width: var(--max); margin: 0 auto; }
 
-/* The orbit: six planets on one arc. Each is a tab. */
-.orbit {
+/* The planets: four kinds of work on one arc, each a tab, its bots circling it as comets. */
+.planets {
   position: relative;
-  max-width: 980px;
-  margin: clamp(36px, 6vh, 64px) auto 0;
+  max-width: 940px;
+  margin: clamp(40px, 6vh, 64px) auto 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-  padding-top: 36px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 44px;
 }
-.orbit::before {
+.planets::before {
   /* The orbit's path, drawn behind the planets. */
   content: "";
   position: absolute;
-  left: 6%;
-  right: 6%;
+  left: 8%;
+  right: 8%;
   top: 0;
-  height: 220%;
+  height: 230%;
   border: 1px dashed var(--line-strong);
   border-radius: 50%;
   border-bottom-color: transparent;
@@ -432,12 +500,13 @@ strong { font-weight: 500; }
 }
 
 .planet {
-  --p: var(--dental);
+  --p: var(--teal);
   position: relative;
   display: grid;
   justify-items: center;
-  gap: 12px;
-  padding: 8px 4px 12px;
+  align-content: start;
+  gap: 10px;
+  padding: 14px 4px 12px;
   border: 0;
   background: none;
   cursor: pointer;
@@ -445,13 +514,16 @@ strong { font-weight: 500; }
   border-radius: var(--radius-m);
   -webkit-tap-highlight-color: transparent;
 }
-.planet:nth-child(1), .planet:nth-child(6) { transform: translateY(32px); }
-.planet:nth-child(2), .planet:nth-child(5) { transform: translateY(10px); }
+.planet:nth-child(1), .planet:nth-child(4) { transform: translateY(30px); }
 
 .planet-body {
+  --size: clamp(62px, 8.6vw, 96px);
   position: relative;
-  width: clamp(54px, 9vw, 92px);
+  width: var(--size);
   aspect-ratio: 1;
+  /* Room under it for its comets' circle (a quarter of its size beyond it, more when it is the
+     chosen one and grows), so they never cross its name. */
+  margin-bottom: calc(var(--size) * 0.36);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -461,79 +533,266 @@ strong { font-weight: 500; }
   transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out), filter 0.4s;
   filter: saturate(0.55) brightness(0.8);
 }
-.planet-body svg {
-  width: 46%;
-  height: 46%;
+.planet-body > svg {
+  position: relative;
+  width: 44%;
+  height: 44%;
   fill: none;
   stroke: var(--night);
   stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+/* The path its comets fly. */
 .planet-ring {
   position: absolute;
-  inset: -12px;
+  inset: -24%;
   border-radius: 50%;
-  border: 1px solid color-mix(in oklab, var(--p) 60%, transparent);
-  opacity: 0;
-  transform: scale(0.7) rotate(0deg);
-  transition: opacity 0.5s, transform 0.8s var(--ease-out);
+  border: 1px dashed color-mix(in oklab, var(--p) 45%, transparent);
+  opacity: 0.35;
+  transition: opacity 0.5s, border-color 0.5s;
 }
-.planet-ring::after {
-  /* A moon on the ring. */
+/* Its comets: one light per bot, each with a fading tail behind it, turning slowly. */
+.planet-comets {
+  position: absolute;
+  inset: -24%;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: orbit-turn 26s linear infinite;
+}
+.planet-comets i {
+  position: absolute;
+  inset: 0;
+  transform: rotate(calc(var(--i) * 360deg / var(--n) + 24deg));
+}
+.planet-comets i::before {
   content: "";
   position: absolute;
-  top: -4px;
   left: 50%;
-  width: 7px;
-  height: 7px;
-  margin-left: -3.5px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
   border-radius: 50%;
-  background: var(--p);
-  box-shadow: 0 0 10px var(--p);
+  background: color-mix(in oklab, var(--c) 55%, white);
+  box-shadow: 0 0 6px 1px var(--c);
 }
+.planet-comets i::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: -1px;
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to left, var(--c), transparent);
+  opacity: 0.85;
+}
+@keyframes orbit-turn { to { rotate: 360deg; } }
+
 .planet-name {
   font-family: var(--display);
   font-variation-settings: "wdth" 100;
-  font-weight: 600;
-  font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 1.0625rem);
+  font-weight: 650;
+  font-size: clamp(0.875rem, 0.72rem + 0.5vw, 1.125rem);
   line-height: 1.15;
   color: var(--mist-dim);
   transition: color 0.3s, font-variation-settings 0.6s var(--ease-out);
+  text-wrap: balance;
+}
+.planet-alt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 6px;
+  margin-top: -4px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--mist-dim);
+}
+.planet-alt [lang="ar"] { font-size: 0.9375rem; line-height: 1.3; }
+.planet-alt > span + span::before { content: "\00B7"; margin-right: 6px; opacity: 0.6; }
+/* Where the Arabic and French names cannot share a line, each takes its own, with no "·" left
+   to start the second. */
+.planet { container-type: inline-size; }
+@container (max-width: 214px) {
+  .planet-alt { flex-direction: column; align-items: center; gap: 0; }
+  .planet-alt > span + span::before { content: none; }
 }
 .planet-state {
+  margin-top: -4px;
   font-size: 0.75rem;
   color: var(--mist-dim);
   opacity: 0.8;
-  margin-top: -8px;
 }
 
 .planet:hover .planet-body { filter: saturate(0.85) brightness(0.95); transform: translateY(-3px); }
 .planet[aria-selected="true"] .planet-body {
   filter: none;
-  transform: scale(1.12);
+  transform: scale(1.1);
   box-shadow: 0 0 0 10px color-mix(in oklab, var(--p) 10%, transparent), 0 24px 60px -16px var(--p);
 }
-.planet[aria-selected="true"] .planet-ring {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-  animation: ring-turn 14s linear infinite;
-}
-.planet[aria-selected="true"] .planet-name { color: var(--mist); font-variation-settings: "wdth" 125; }
+.planet[aria-selected="true"] .planet-ring { opacity: 1; }
+.planet[aria-selected="true"] .planet-name { color: var(--p); font-variation-settings: "wdth" 118; }
+.planet[aria-selected="true"] .planet-alt { color: var(--mist); }
+.planet:focus-visible { outline-color: var(--p); }
 
-@keyframes ring-turn { to { transform: scale(1) rotate(360deg); } }
+/* The chosen planet's line, and its comets: the second row. */
+.comet-panels { max-width: var(--max); margin: clamp(44px, 7vh, 72px) auto 0; }
+.comet-panel { display: grid; justify-items: center; text-align: center; }
+.comet-panel[hidden] { display: none; }
+.planet-line {
+  max-width: 34em;
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  color: var(--mist);
+  text-wrap: balance;
+}
+.planet-line-alt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  max-width: 48em;
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--mist-dim);
+  text-wrap: balance;
+}
+.planet-line-alt [lang="ar"] { font-size: 1rem; }
+
+.comets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 26px;
+}
+.comet {
+  --p: var(--teal);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 10px 22px 10px 50px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgb(7 26 29 / 0.5);
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.3s, background-color 0.3s, box-shadow 0.4s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.comet:hover { border-color: color-mix(in oklab, var(--p) 55%, transparent); transform: translateY(-2px); }
+.comet-head {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, color-mix(in oklab, var(--p) 40%, white), var(--p) 46%, color-mix(in oklab, var(--p) 45%, var(--night)) 100%);
+  filter: saturate(0.5) brightness(0.8);
+  transition: filter 0.3s, box-shadow 0.4s;
+}
+.comet-head::before {
+  /* Its tail. */
+  content: "";
+  position: absolute;
+  right: 55%;
+  top: 50%;
+  z-index: -1;
+  width: 44px;
+  height: 5px;
+  margin-top: -2.5px;
+  border-radius: 5px;
+  background: linear-gradient(to left, color-mix(in oklab, var(--p) 85%, white), transparent);
+  transform: rotate(14deg);
+  transform-origin: right center;
+  opacity: 0.4;
+  transition: opacity 0.4s, width 0.5s var(--ease-out);
+}
+.comet-head svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--night);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.comet-text { display: grid; min-width: 0; }
+.comet-name {
+  font-family: var(--display);
+  font-variation-settings: "wdth" 104;
+  font-weight: 650;
+  font-size: 1rem;
+  line-height: 1.15;
+  color: var(--mist);
+}
+.comet-state { margin-top: 3px; font-size: 0.75rem; line-height: 1.3; color: var(--mist-dim); }
+.comet-state[data-state="live"] { color: color-mix(in oklab, var(--p) 55%, var(--mist)); }
+
+.comet[aria-selected="true"] {
+  border-color: color-mix(in oklab, var(--p) 75%, transparent);
+  background: color-mix(in oklab, var(--p) 13%, rgb(7 26 29 / 0.7));
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--p) 9%, transparent), 0 16px 44px -20px var(--p);
+}
+.comet[aria-selected="true"] .comet-head { filter: none; box-shadow: 0 0 24px -2px var(--p); }
+.comet[aria-selected="true"] .comet-head::before { opacity: 1; width: 52px; }
+.comet:hover .comet-head { filter: saturate(0.85) brightness(0.95); }
+.comet:focus-visible { outline-color: var(--p); border-radius: 999px; }
+
+/* A planet's comets fly in when it is chosen. */
+.comet-panel.is-arriving .planet-line,
+.comet-panel.is-arriving .planet-line-alt { animation: rise 0.6s var(--ease-out) both; }
+.comet-panel.is-arriving .planet-line-alt { animation-delay: 0.06s; }
+.comet-panel.is-arriving .comet {
+  animation: comet-in 0.75s var(--ease-out) both;
+  animation-delay: calc(var(--i) * 85ms + 80ms);
+}
+@keyframes comet-in {
+  from { opacity: 0; transform: translate(-34px, -10px) scale(0.9); filter: blur(3px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
 
 @media (max-width: 560px) {
-  .orbit { gap: 2px; padding-top: 20px; }
-  .orbit::before { display: none; }
-  .planet { padding-inline: 0; gap: 10px; }
+  .planets { gap: 2px; padding-top: 16px; }
+  .planets::before { display: none; }
+  .planet { padding: 12px 0 6px; gap: 8px; }
   .planet:nth-child(n) { transform: none; }
-  .planet-ring { inset: -8px; }
-  .planet-state { display: none; }
-  /* Six on a phone: two rows of three, each column free to shrink. */
-  .orbit { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; padding-inline: 8px; }
-  .planet-name { font-size: 0.75rem; hyphens: auto; }
+  .planet-body { --size: 50px; }
+  .planet-alt, .planet-state { display: none; }
+  .planet-name { font-size: 0.75rem; }
   .planet[aria-selected="true"] .planet-name { font-variation-settings: "wdth" 100; }
+  .planet-comets i::after { width: 16px; }
+  .planet-comets i::before { width: 5px; height: 5px; margin-left: -2.5px; top: -2.5px; }
+  .comet-panels { margin-top: 30px; }
+  .planet-line { font-size: 1rem; }
+  .planet-line-alt { font-size: 0.875rem; gap: 2px 14px; }
+  .comets { gap: 8px; margin-top: 20px; }
+  /* Two to a line at most, so one planet's comets fit on two lines: each a small card, its head
+     over its name, the third centred under the first two. */
+  .comet {
+    flex: 0 1 calc(50% - 4px);
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 10px 12px;
+    border-radius: 22px;
+    text-align: center;
+  }
+  .comet-head { width: 34px; height: 34px; }
+  .comet-head svg { width: 18px; height: 18px; }
+  .comet-head::before { width: 30px; }
+  .comet[aria-selected="true"] .comet-head::before { width: 38px; }
+  .comet-text { justify-items: center; }
+  .comet-name { font-size: 0.875rem; text-wrap: balance; }
+  .comet-state { font-size: 0.6875rem; }
 }
 
 /* The stage: every world's panel sits in one grid cell, so a new one can open over the old. */
@@ -575,6 +834,28 @@ strong { font-weight: 500; }
 @media (max-width: 560px) {
   .world-stage { margin-inline: calc(var(--gutter) * -1 + 8px); }
   .world { padding: 22px 16px; border-radius: var(--radius-m); }
+}
+
+/* Which planet a world belongs to, over its name. */
+.world-planet {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.8125rem;
+  font-weight: 450;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--p) 70%, var(--mist));
+}
+.world-planet svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .world-name {
@@ -689,6 +970,9 @@ strong { font-weight: 500; }
 .menu td { text-align: right; white-space: nowrap; color: var(--mist-dim); }
 .menu td.price { color: var(--mist); font-weight: 450; font-variant-numeric: tabular-nums; padding-left: 16px; }
 .menu tr:last-child th, .menu tr:last-child td { border-bottom: 0; }
+/* A worked-out bill ends with what is owed. */
+.menu tr.is-total th, .menu tr.is-total td { border-top: 1px solid var(--line-strong); color: var(--mist); font-weight: 500; }
+.menu tr.is-total td.price { color: var(--world); }
 
 .facts {
   display: grid;
@@ -1230,6 +1514,179 @@ strong { font-weight: 500; }
 
 .phone.is-live { box-shadow: 0 0 0 1px rgb(230 242 238 / 0.08), 0 40px 80px -30px rgb(0 0 0 / 0.7), 0 0 110px -26px color-mix(in oklab, var(--world) 75%, transparent); }
 
+/* ── A bot not live yet: the phone waits for its recorded conversation ── */
+
+.phone-waiting .log { align-items: center; justify-content: center; gap: 26px; }
+.phone-waiting .log-intro { margin: 0; }
+.waiting-mark {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, color-mix(in oklab, var(--world) 40%, white), var(--world) 46%, color-mix(in oklab, var(--world) 40%, var(--night)) 100%);
+  box-shadow: 0 0 70px -12px var(--world);
+}
+.waiting-mark svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  stroke: var(--night);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.waiting-mark span,
+.call-avatar span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid color-mix(in oklab, var(--world) 60%, transparent);
+  animation: ring-out 3.2s ease-out infinite;
+  pointer-events: none;
+}
+.waiting-mark span + span { animation-delay: 1.6s; }
+@keyframes ring-out {
+  from { transform: scale(1); opacity: 0.85; }
+  to { transform: scale(1.9); opacity: 0; }
+}
+.phone-waiting .send {
+  justify-content: center;
+  padding: 8px 16px;
+  border-style: dashed;
+  cursor: default;
+  opacity: 0.75;
+}
+.phone-waiting .send-text { flex: none; color: var(--mist-dim); }
+
+/* ── Voice only: the phone rings instead of chatting ──────────────────── */
+
+.phone-call { grid-template-rows: minmax(0, 1fr); }
+.call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 0;
+  padding: 30px 22px 26px;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(120% 64% at 50% 0%, color-mix(in oklab, var(--world) 26%, #0e2328), transparent 70%),
+    radial-gradient(80% 40% at 50% 100%, color-mix(in oklab, var(--world) 10%, #0e2328), transparent 70%),
+    #0e2328;
+}
+.call-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist-dim);
+}
+.call-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--world);
+  animation: pulse 2.4s ease-out infinite;
+}
+.call-avatar {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  margin: 14px 0 6px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, color-mix(in oklab, var(--world) 40%, white), var(--world) 46%, color-mix(in oklab, var(--world) 40%, var(--night)) 100%);
+  box-shadow: 0 0 90px -14px var(--world);
+}
+.call-avatar svg {
+  width: 54px;
+  height: 54px;
+  fill: none;
+  stroke: var(--night);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.call-avatar span { animation-duration: 3s; }
+.call-avatar span:nth-child(2) { animation-delay: 1s; }
+.call-avatar span:nth-child(3) { animation-delay: 2s; }
+.call-who strong {
+  display: block;
+  font-family: var(--display);
+  font-variation-settings: "wdth" 115;
+  font-weight: 760;
+  font-size: 1.625rem;
+  line-height: 1.1;
+}
+.call-who span { display: block; margin-top: 4px; font-size: 0.9375rem; color: var(--mist-dim); }
+.call-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 46px;
+  width: min(100%, 240px);
+}
+.call-wave i {
+  flex: 1;
+  max-width: 4px;
+  height: calc(8px + 36px * var(--h, 0.5));
+  border-radius: 3px;
+  background: linear-gradient(to top, color-mix(in oklab, var(--world) 60%, transparent), color-mix(in oklab, var(--world) 70%, white));
+  transform-origin: center;
+  animation: voice-wave 1.7s ease-in-out infinite;
+  animation-delay: calc(var(--k) * -61ms);
+}
+@keyframes voice-wave {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+.call-text {
+  max-width: 24em;
+  font-size: 0.9375rem;
+  color: var(--mist);
+  opacity: 0.9;
+  text-wrap: balance;
+}
+.call-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  margin-top: 8px;
+  padding: 8px 22px 8px 8px;
+  border: 1px dashed color-mix(in oklab, var(--world) 60%, transparent);
+  border-radius: 999px;
+  background: rgb(7 26 29 / 0.55);
+  color: var(--mist);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+.call-go svg {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  padding: 9px;
+  border-radius: 50%;
+  background: var(--world);
+  fill: var(--night);
+}
+@media (max-width: 560px) {
+  .call { padding: 24px 16px 20px; gap: 12px; }
+  .call-avatar { width: 96px; height: 96px; }
+  .call-avatar svg { width: 44px; height: 44px; }
+  .call-go { padding-right: 16px; font-size: 0.875rem; }
+}
+
 /* ── How it works ─────────────────────────────────────────────────────── */
 
 .how {
@@ -1310,12 +1767,12 @@ strong { font-weight: 500; }
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack));
+  background: linear-gradient(90deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack), var(--generator), var(--voice));
   transform-origin: left;
   transform: scaleX(var(--progress, 0));
 }
 .how-track[data-axis="y"] .how-fill {
-  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack));
+  background: linear-gradient(180deg, var(--dental), var(--salon), var(--medical), var(--wholesale), var(--electronics), var(--snack), var(--generator), var(--voice));
   transform-origin: top;
   transform: scaleY(var(--progress, 0));
 }
