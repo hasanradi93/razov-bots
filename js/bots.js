@@ -623,10 +623,10 @@ window.BOTS = [
     name: "Snack Restaurant",
     hue: "#ff7b54",
     icon: "burger",
-    username: "razovtech_snack_bot",
+    username: "razovtech_snack_bot", // live on the Oracle server since 2026-11-07
     display: "Snack Restaurant demo",
-    status: "soon",
-    statusText: "Demo here, on Telegram soon",
+    status: "live",
+    statusText: "Live on Telegram",
     pitch: "A snack restaurant's orders on Telegram: burgers, pizza and sandwiches made the customer's way, for now or for later, delivered or picked up — and the kitchen answers each order with one tap.",
     does: [
       "Takes each dish the customer's way, one step at a time: the size, the sauce, extras, “no onions”, and “as a meal” with fries and a drink — the price shown as it goes.",
